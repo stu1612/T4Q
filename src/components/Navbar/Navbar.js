@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import { ThemeContext } from "../../contexts/ThemeContext";
 import { ThemeToggler } from "../ThemeToggler/ThemeToggler";
 import { SwitchRoutes } from "../../routes/Switch";
 
-import { Nav } from "./NavbarStyle";
+import { Nav, ListContainer, NavLink } from "./Style";
 import { Logo } from "../Logo/Logo";
 
 export const Navbar = () => {
@@ -13,12 +13,12 @@ export const Navbar = () => {
     <Router>
       <Nav>
         <Logo />
-        <ul>
-          <Link to="/">Hem</Link>
-          <Link to="/herr">Herr</Link>
-          <Link to="/dam">Dam</Link>
-          <Link to="/junior">Junior</Link>
-        </ul>
+        <ListContainer>
+          <NavLink to="/">Hem</NavLink>
+          <NavLink to="/herr">Herr</NavLink>
+          <NavLink to="/dam">Dam</NavLink>
+          <NavLink to="/junior">Junior</NavLink>
+        </ListContainer>
         <ThemeToggler themeToggler={themeToggler} />
       </Nav>
       <SwitchRoutes />

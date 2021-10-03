@@ -3,6 +3,7 @@ export const lightTheme = {
   color: "#1d1f28",
   buttonBg: "#c5718d",
   primary: "#c70101",
+  blue: "blue",
 };
 
 export const darkTheme = {

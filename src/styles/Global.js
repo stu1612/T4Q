@@ -15,6 +15,12 @@ export const GlobalStyles = createGlobalStyle`
   transition: all 0.50s linear; 
   }
 
+  li {
+    text-decoration:none;
+    list-style:none;
+    color: white
+  }
+
 p {
 }
 
@@ -34,6 +40,7 @@ strong {
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Merriweather', serif;
 } 
+
 
 
 `;
