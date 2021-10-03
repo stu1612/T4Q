@@ -8,18 +8,29 @@ export const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 0px 30px;
+  overflow: hidden;
 `;
 
 export const ListContainer = styled.ul`
-  padding: 30px 0px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-grow: 1;
 `;
 
 export const NavLink = styled(Link)`
-  color: ${({ theme }) => theme.color};
+  color: ${({ theme }) => theme.navFont};
   text-decoration: none;
   list-style: none;
-  margin: 0px 40px;
+  margin: 0px 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 24px 5px;
+  border-bottom: 4px solid transparent;
+  &:hover {
+    border-bottom: 4px solid white;
+  }
+
+  &:active {
+    border-bottom: 4px solid white;
+  }
 `;

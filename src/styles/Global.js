@@ -15,12 +15,6 @@ export const GlobalStyles = createGlobalStyle`
   transition: all 0.50s linear; 
   }
 
-  li {
-    text-decoration:none;
-    list-style:none;
-    color: white
-  }
-
 p {
 }
 
