@@ -6,7 +6,6 @@ export const Hem = () => {
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "red",
     height: "100vh",
   };
 

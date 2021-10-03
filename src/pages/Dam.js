@@ -7,7 +7,6 @@ export const Dam = () => {
     justifyContent: "center",
     alignItems: "center",
     height: "100vh",
-    backgroundColor: "yellow",
   };
 
   return (

@@ -7,7 +7,6 @@ export const Herr = () => {
     justifyContent: "center",
     alignItems: "center",
     height: "100vh",
-    backgroundColor: "green",
   };
 
   return (

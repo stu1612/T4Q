@@ -7,7 +7,6 @@ export const Junior = () => {
     justifyContent: "center",
     alignItems: "center",
     height: "100vh",
-    backgroundColor: "blue",
   };
 
   return (
