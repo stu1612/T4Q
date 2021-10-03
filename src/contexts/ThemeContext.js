@@ -1,6 +1,4 @@
 import { createContext, useState } from "react";
-// import { ThemeProvider } from "styled-components";
-// import { Themes } from "../styles/Theme";
 
 export const ThemeContext = createContext();
 

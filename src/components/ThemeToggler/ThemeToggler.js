@@ -1,7 +1,7 @@
 import React from "react";
-import Button from "../Button/Button";
+import { FaBasketballBall } from "@react-icons/all-files/fa/FaBasketballBall";
 
 export const ThemeToggler = (props) => {
   const { themeToggler } = props;
-  return <Button onClick={themeToggler}>Toggle</Button>;
+  return <FaBasketballBall onClick={themeToggler} />;
 };

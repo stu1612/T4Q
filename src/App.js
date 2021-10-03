@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import { ThemeProvider } from "styled-components";
-// import { ThemeToggler } from "./components/ThemeToggler/ThemeToggler";
 import { ThemeContext } from "./contexts/ThemeContext";
-import { Navigation } from "./Navigation";
 import { GlobalStyles } from "./styles/Global";
 import { lightTheme, darkTheme } from "./styles/Theme";
+import { Navbar } from "./components/Navbar/Navbar";
+// import { FaBeer } from "@react-icons/all-files/fa/FaBeer";
 
 function App() {
   const { theme, themeToggler } = useContext(ThemeContext);
@@ -13,8 +13,7 @@ function App() {
     <ThemeProvider theme={selectedTheme}>
       <>
         <GlobalStyles />
-        {/* <ThemeToggler themeToggler={themeToggler} /> */}
-        <Navigation />
+        <Navbar />
       </>
     </ThemeProvider>
   );
