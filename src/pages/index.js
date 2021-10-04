@@ -7,6 +7,7 @@ export const Hem = () => {
     justifyContent: "center",
     alignItems: "center",
     height: "100vh",
+    background: "blue",
   };
 
   return (

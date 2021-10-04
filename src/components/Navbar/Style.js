@@ -7,8 +7,11 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 30px;
+  /* padding: 0px 30px; */
   overflow: hidden;
+  position: absolute;
+  width: 100%;
+  top: 0;
 `;
 
 export const ListContainer = styled.ul`

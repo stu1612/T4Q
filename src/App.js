@@ -9,6 +9,7 @@ import { Navbar } from "./components/Navbar/Navbar";
 function App() {
   const { theme, themeToggler } = useContext(ThemeContext);
   const selectedTheme = theme === "light" ? lightTheme : darkTheme;
+
   return (
     <ThemeProvider theme={selectedTheme}>
       <>
