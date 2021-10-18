@@ -6,13 +6,18 @@ export const Hem = () => {
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    height: "100vh",
+    height: "100%",
+    minHeight: "100vh",
     background: "blue",
+    width: "100%",
+    // overflowAnchor: "none !important",
+    // overflow: "hidden",
   };
 
   return (
     <div style={container}>
       <h2>Home</h2>
+      <p>Hello</p>
     </div>
   );
 };

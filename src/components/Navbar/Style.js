@@ -7,10 +7,11 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* padding: 0px 30px; */
-  overflow: hidden;
+  padding: 0px 20px;
   position: absolute;
   width: 100%;
+  height: auto;
+  overflow: hidden;
   top: 0;
 `;
 
