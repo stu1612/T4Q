@@ -7,16 +7,33 @@ export const NAV = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0px 16px;
   position: absolute;
   width: 100%;
   overflow: hidden;
   top: 0;
+  z-index: 10;
 `;
 
 export const NAV_HEADER = styled.header`
   display: flex;
   align-items: center;
+  padding: 0 6px;
+`;
+
+export const NAV_CONTAINER = styled.div`
+  background: ${({ theme }) => theme.primary};
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 20;
+  width: 100%;
+  height: 73px;
+`;
+
+export const TOGGLE_NAV = styled.div`
+  @media (min-width: 768px) {
+    display: none;
+  }
 `;
 
 export const DESK_NAV_LINKS = styled.ul`
@@ -25,6 +42,9 @@ export const DESK_NAV_LINKS = styled.ul`
   flex-direction: "row";
   align-items: "center";
   flex-grow: 1;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const NAV_LINK = styled(Link)`
@@ -67,4 +87,8 @@ export const NAV_LINK = styled(Link)`
   } */
 `;
 
-export const TOGGLER = styled.div``;
+export const TOGGLE_THEME = styled.div`
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+`;
