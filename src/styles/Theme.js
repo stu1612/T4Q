@@ -4,13 +4,14 @@ export const lightTheme = {
   buttonBg: "#c5718d",
   primary: "#c70101",
   navFont: "#fff",
+  borderColor: "#000",
 };
 
 export const darkTheme = {
-  // background: "#1d1f28",
   background: "#444444",
   color: "#fafafa",
   buttonBg: "#515d90",
   primary: "#171717",
   navFont: "#ededed",
+  borderColor: "#fff",
 };

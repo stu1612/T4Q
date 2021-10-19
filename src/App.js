@@ -11,12 +11,12 @@ function App() {
 
   return (
     <ThemeProvider theme={selectedTheme}>
-      <div style={{ width: "100%", height: "100%", overflow: "hidden" }}>
-        <GlobalStyles />
-        <div style={{ width: "100%", height: "100%", overflow: "hidden" }}>
-          <Navbar />
-        </div>
-      </div>
+      {/* <div style={{ width: "100%", height: "100%", overflow: "hidden" }}> */}
+      <GlobalStyles />
+      {/* <div style={{ width: "100%", height: "100%", overflow: "hidden" }}> */}
+      <Navbar />
+      {/* </div>
+      </div> */}
     </ThemeProvider>
   );
 }
