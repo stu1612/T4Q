@@ -2,20 +2,24 @@
 import styled from "styled-components";
 import { NavLink as Link } from "react-router-dom";
 
-export const Nav = styled.nav`
+export const NAV = styled.nav`
   background: ${({ theme }) => theme.primary};
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 0px 16px;
   position: absolute;
   width: 100%;
-  height: "100%";
   overflow: hidden;
   top: 0;
 `;
 
-export const ListContainer = styled.ul`
+export const NAV_HEADER = styled.header`
+  display: flex;
+  align-items: center;
+`;
+
+export const DESK_NAV_LINKS = styled.ul`
   display: flex;
   justify-content: flex-start;
   flex-direction: "row";
@@ -23,7 +27,7 @@ export const ListContainer = styled.ul`
   flex-grow: 1;
 `;
 
-export const NavLink = styled(Link)`
+export const NAV_LINK = styled(Link)`
   color: ${({ theme }) => theme.navFont};
   font-family: "Sora", sans-serif;
   font-size: 14px;
@@ -58,11 +62,9 @@ export const NavLink = styled(Link)`
     left: 0;
   }
 
-  /* &:hover {
-    border-bottom: 3px solid white;
-  } */
-
   /* &:active {
     border-bottom: 3px solid white;
   } */
 `;
+
+export const TOGGLER = styled.div``;
