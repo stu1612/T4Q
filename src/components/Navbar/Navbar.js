@@ -12,25 +12,15 @@ import {
   DESK_NAV_LINKS,
   NAV_LINK,
   TOGGLE_THEME,
+  MOBILE_CONTAINER,
 } from "./Style";
-import { LOGO } from "../Logo/Logo";
-import { HamburgerMenu } from "../Hamburger/Hamburger";
+import { LOGO } from "./Logo/Logo";
+import { HamburgerMenu } from "./Hamburger/Hamburger";
 
 export const Navbar = () => {
   const { theme, themeToggler } = useContext(ThemeContext);
   const [open, isOpen] = useState(false);
 
-  const container = {
-    background: "yellow",
-    position: "fixed",
-    top: 0,
-    right: 0,
-    left: 0,
-    bottom: 0,
-    height: "100vh",
-    width: "100vw",
-    overflow: "hidden",
-  };
   return (
     <Router>
       <NAV>
@@ -41,21 +31,25 @@ export const Navbar = () => {
           <TOGGLE_NAV>
             <HamburgerMenu open={open} isOpen={isOpen} />
           </TOGGLE_NAV>
-          <DESK_NAV_LINKS>
-            <NAV_LINK to="/">Hem</NAV_LINK>
-            <NAV_LINK to="/herr">Herr</NAV_LINK>
-            <NAV_LINK to="/dam">Dam</NAV_LINK>
-            <NAV_LINK to="/junior">Junior</NAV_LINK>
-          </DESK_NAV_LINKS>
+          {!open ? (
+            <DESK_NAV_LINKS>
+              <NAV_LINK to="/">Hem</NAV_LINK>
+              <NAV_LINK to="/herr">Herr</NAV_LINK>
+              <NAV_LINK to="/dam">Dam</NAV_LINK>
+              <NAV_LINK to="/junior">Junior</NAV_LINK>
+            </DESK_NAV_LINKS>
+          ) : null}
+
           <TOGGLE_THEME>
             <ThemeToggler themeToggler={themeToggler} />
           </TOGGLE_THEME>
         </NAV_CONTAINER>
+        {open ? (
+          <MOBILE_CONTAINER>
+            <h3>Hello</h3>
+          </MOBILE_CONTAINER>
+        ) : null}
       </NAV>
-      {/* <div style={container}>
-        <h2>Sup</h2>
-      </div> */}
-
       <SwitchRoutes />
     </Router>
   );

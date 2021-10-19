@@ -2,6 +2,7 @@
 import styled from "styled-components";
 import { NavLink as Link } from "react-router-dom";
 
+// DESKTOP STYLES
 export const NAV = styled.nav`
   background: ${({ theme }) => theme.primary};
   display: flex;
@@ -15,9 +16,26 @@ export const NAV = styled.nav`
 `;
 
 export const NAV_HEADER = styled.header`
+  background-color: #c70101;
   display: flex;
   align-items: center;
   padding: 0 6px;
+`;
+
+// IMAGE styling for Logo
+export const IMAGE = styled.img`
+  width: 73px;
+  height: 73px;
+  padding: 6px 0;
+  object-fit: contain;
+  @media (max-width: 1024px) {
+    width: 68px;
+    height: 68px;
+  }
+  @media (max-width: 768px) {
+    width: 60px;
+    height: 60px;
+  }
 `;
 
 export const NAV_CONTAINER = styled.div`
@@ -28,10 +46,16 @@ export const NAV_CONTAINER = styled.div`
   z-index: 20;
   width: 100%;
   height: 73px;
+  @media (max-width: 1024px) {
+    height: 68px;
+  }
+  @media (max-width: 768px) {
+    height: 60px;
+  }
 `;
 
 export const TOGGLE_NAV = styled.div`
-  @media (min-width: 768px) {
+  @media (min-width: 1025px) {
     display: none;
   }
 `;
@@ -63,6 +87,9 @@ export const NAV_LINK = styled(Link)`
   padding: 0 6px;
   text-transform: uppercase;
   position: relative;
+  @media (max-width: 1024px) {
+    height: 68px;
+  }
 
   &:after {
     background: none repeat scroll 0 0 transparent;
@@ -91,4 +118,20 @@ export const TOGGLE_THEME = styled.div`
   padding: 0 12px;
   display: flex;
   align-items: center;
+`;
+
+// MOBILE STYLES
+export const MOBILE_CONTAINER = styled.div`
+  position: fixed;
+  top: 100;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  z-index: -10;
+  background-color: pink;
 `;
