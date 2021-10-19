@@ -3,6 +3,8 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { ThemeContext } from "../../contexts/ThemeContext";
 import { ThemeToggler } from "../ThemeToggler/ThemeToggler";
 import { SwitchRoutes } from "../../routes/Switch";
+import { Button } from "../Button/Button";
+import { FiChevronRight } from "react-icons/fi";
 
 import {
   NAV,
@@ -13,6 +15,11 @@ import {
   NAV_LINK,
   TOGGLE_THEME,
   MOBILE_CONTAINER,
+  MOBILE_CONTACT,
+  MOBILE_WRAPPER,
+  MOB_LINKS,
+  MOB_LINK,
+  WRAPPER,
 } from "./Style";
 import { LOGO } from "./Logo/Logo";
 import { HamburgerMenu } from "./Hamburger/Hamburger";
@@ -46,7 +53,29 @@ export const Navbar = () => {
         </NAV_CONTAINER>
         {open ? (
           <MOBILE_CONTAINER>
-            <h3>Hello</h3>
+            <MOBILE_WRAPPER>
+              <MOBILE_CONTACT>
+                <Button title="kontakt" />
+              </MOBILE_CONTACT>
+              <MOB_LINKS>
+                <WRAPPER>
+                  <MOB_LINK to="/">Hem</MOB_LINK>
+                  <FiChevronRight />
+                </WRAPPER>
+                <WRAPPER>
+                  <MOB_LINK to="/">Herr</MOB_LINK>
+                  <FiChevronRight />
+                </WRAPPER>
+                <WRAPPER>
+                  <MOB_LINK to="/">Dam</MOB_LINK>
+                  <FiChevronRight />
+                </WRAPPER>
+                <WRAPPER>
+                  <MOB_LINK to="/">Junior</MOB_LINK>
+                  <FiChevronRight />
+                </WRAPPER>
+              </MOB_LINKS>
+            </MOBILE_WRAPPER>
           </MOBILE_CONTAINER>
         ) : null}
       </NAV>

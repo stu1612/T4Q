@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 import styled from "styled-components";
-import { NavLink as Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // DESKTOP STYLES
 export const NAV = styled.nav`
@@ -20,6 +20,13 @@ export const NAV_HEADER = styled.header`
   display: flex;
   align-items: center;
   padding: 0 6px;
+  height: 73px;
+  @media (max-width: 1024px) {
+    height: 68px;
+  }
+  @media (max-width: 768px) {
+    height: 60px;
+  }
 `;
 
 // IMAGE styling for Logo
@@ -100,7 +107,7 @@ export const NAV_LINK = styled(Link)`
     left: 50%;
     border-radius: 16px;
     position: absolute;
-    background: ${({ theme }) => theme.borderColor};
+    background: ${({ theme }) => theme.borderSharp};
     transition: width 0.2s ease 0s, left 0.2s ease 0s;
     width: 0;
   }
@@ -123,7 +130,7 @@ export const TOGGLE_THEME = styled.div`
 // MOBILE STYLES
 export const MOBILE_CONTAINER = styled.div`
   position: fixed;
-  top: 100;
+  top: 73px;
   right: 0;
   left: 0;
   bottom: 0;
@@ -133,5 +140,44 @@ export const MOBILE_CONTAINER = styled.div`
   display: flex;
   justify-content: center;
   z-index: -10;
-  background-color: pink;
+  background: ${({ theme }) => theme.background};
+
+  @media (max-width: 1024px) {
+    top: 68px;
+  }
+  @media (max-width: 768px) {
+    top: 60px;
+  }
+`;
+
+export const MOBILE_WRAPPER = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const MOBILE_CONTACT = styled.div`
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: ${({ theme }) => theme.borderLight};
+`;
+
+export const MOB_LINKS = styled.ul`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const MOB_LINK = styled(Link)``;
+
+export const WRAPPER = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 `;

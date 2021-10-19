@@ -1,11 +1,8 @@
-import styled from "styled-components";
+import React from "react";
+import { BUTTON } from "./Style.js";
 
-export default styled.button`
-  cursor: pointer;
-  border: none;
-  background-color: ${({ theme }) => theme.buttonBg};
-  color: #fff;
-  padding: 10px;
-  border-radius: 5px;
-  font-size: 1.5rem;
-`;
+export const Button = ({ title }) => (
+  <BUTTON whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+    {title}
+  </BUTTON>
+);

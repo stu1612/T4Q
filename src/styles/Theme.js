@@ -1,10 +1,11 @@
 export const lightTheme = {
-  background: "#fff",
+  background: "#fafafa",
   color: "#1d1f28",
   buttonBg: "#c5718d",
   primary: "#c70101",
   navFont: "#fff",
-  borderColor: "#000",
+  borderSharp: "#000",
+  borderLight: "#d3d5d7",
 };
 
 export const darkTheme = {
@@ -13,5 +14,6 @@ export const darkTheme = {
   buttonBg: "#515d90",
   primary: "#171717",
   navFont: "#ededed",
-  borderColor: "#fff",
+  bordersharp: "#fff",
+  borderLight: '#fafafa"',
 };
