@@ -8,7 +8,6 @@ export const Hem = () => {
     alignItems: "center",
     height: "100%",
     minHeight: "100vh",
-    background: "blue",
     width: "100%",
     // overflowAnchor: "none !important",
     // overflow: "hidden",

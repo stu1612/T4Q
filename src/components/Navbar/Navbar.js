@@ -45,7 +45,21 @@ export const Navbar = () => {
               <NAV_LINK to="/dam">Dam</NAV_LINK>
               <NAV_LINK to="/junior">Junior</NAV_LINK>
             </DESK_NAV_LINKS>
-          ) : null}
+          ) : (
+            <MOBILE_CONTAINER>
+              <MOBILE_WRAPPER>
+                <MOBILE_CONTACT>
+                  <Button title="kontakt" />
+                </MOBILE_CONTACT>
+                <MOB_LINKS>
+                  <WRAPPER>
+                    <MOB_LINK to="/">Hem</MOB_LINK>
+                    <FiChevronRight />
+                  </WRAPPER>
+                </MOB_LINKS>
+              </MOBILE_WRAPPER>
+            </MOBILE_CONTAINER>
+          )}
 
           <TOGGLE_THEME>
             <ThemeToggler themeToggler={themeToggler} />

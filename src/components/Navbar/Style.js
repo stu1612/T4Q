@@ -129,8 +129,10 @@ export const TOGGLE_THEME = styled.div`
 
 // MOBILE STYLES
 export const MOBILE_CONTAINER = styled.div`
+  background: ${({ theme }) => theme.background};
   position: fixed;
-  top: 73px;
+  /* top: 73px; */
+  top: 100px;
   right: 0;
   left: 0;
   bottom: 0;
@@ -140,14 +142,13 @@ export const MOBILE_CONTAINER = styled.div`
   display: flex;
   justify-content: center;
   z-index: -10;
-  background: ${({ theme }) => theme.background};
 
-  @media (max-width: 1024px) {
+  /* @media (max-width: 1024px) {
     top: 68px;
   }
   @media (max-width: 768px) {
     top: 60px;
-  }
+  } */
 `;
 
 export const MOBILE_WRAPPER = styled.div`
@@ -165,7 +166,7 @@ export const MOBILE_CONTACT = styled.div`
   align-items: center;
   border-top: 1px solid;
   border-bottom: 1px solid;
-  border-color: ${({ theme }) => theme.borderLight};
+  /* border-color: ${({ theme }) => theme.borderLight}; */
 `;
 
 export const MOB_LINKS = styled.ul`

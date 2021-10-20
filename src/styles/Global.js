@@ -12,8 +12,8 @@ export const GlobalStyles = createGlobalStyle`
 
 body {
   font-family: 'IBM Plex Sans', sans-serif;
-  background: ${({ theme }) => theme.background};
-  color: ${({ theme }) => theme.color};
+  /* background: ${({ theme }) => theme.background};
+  color: ${({ theme }) => theme.color}; */
   transition: background 0.50s linear; 
   overflow-anchor: none;
   }
