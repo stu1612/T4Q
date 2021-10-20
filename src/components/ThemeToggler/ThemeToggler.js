@@ -4,7 +4,7 @@ import { FaBasketballBall } from "@react-icons/all-files/fa/FaBasketballBall";
 
 export const ThemeToggler = (props) => {
   const Icon = styled(FaBasketballBall)`
-    color: ${({ theme }) => theme.color};
+    color: ${({ theme }) => theme.text};
   `;
 
   const { themeToggler } = props;

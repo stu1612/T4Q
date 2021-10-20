@@ -6,17 +6,13 @@ export const GlobalStyles = createGlobalStyle`
   margin: 0;
   padding: 0;
   list-style: none;
-
-
- }
+}
 
 body {
-  font-family: 'IBM Plex Sans', sans-serif;
-  /* background: ${({ theme }) => theme.background};
-  color: ${({ theme }) => theme.color}; */
-  transition: background 0.50s linear; 
+  font-family: "IBM Plex Sans", sans-serif;
+  transition: background 0.5s linear;
   overflow-anchor: none;
-  }
+}
 
 p {
 }
@@ -34,9 +30,12 @@ strong {
   font-weight: 800;
 }
 
-h1,h2,h3,h4,h5,h6 {
-  font-family: 'Merriweather', serif;
-} 
-
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Merriweather", serif;
+}
 `;

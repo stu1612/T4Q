@@ -1,55 +1,5 @@
-/* eslint-disable no-undef */
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-
-// DESKTOP STYLES
-export const Nav = styled.nav`
-  background: ${({ theme }) => theme.primary};
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: absolute;
-  width: 100%;
-  overflow: hidden;
-  top: 0;
-  z-index: 10;
-`;
-
-export const NavHeader = styled.header`
-  background: ${({ theme }) => theme.primary};
-  display: flex;
-  align-items: center;
-  padding: 0 6px;
-  height: 73px;
-  @media (max-width: 1024px) {
-    height: 68px;
-  }
-  @media (max-width: 768px) {
-    height: 60px;
-  }
-`;
-
-export const NavContainer = styled.div`
-  background: ${({ theme }) => theme.primary};
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 20;
-  width: 100%;
-  height: 73px;
-  @media (max-width: 1024px) {
-    height: 68px;
-  }
-  @media (max-width: 768px) {
-    height: 60px;
-  }
-`;
-
-export const ToggleNavigation = styled.div`
-  @media (min-width: 1025px) {
-    display: none;
-  }
-`;
 
 export const DesktopNavigationLinks = styled.ul`
   display: flex;
@@ -103,10 +53,4 @@ export const NavLink = styled(Link)`
   /* &:active {
     border-bottom: 3px solid white;
   } */
-`;
-
-export const TOGGLE_THEME = styled.div`
-  padding: 0 12px;
-  display: flex;
-  align-items: center;
 `;

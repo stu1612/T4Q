@@ -2,6 +2,8 @@ import React from "react";
 
 export const Hem = () => {
   const container = {
+    // background: "#1d1f28",
+    background: "#171717",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",

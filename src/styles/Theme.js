@@ -1,19 +1,26 @@
 export const lightTheme = {
-  background: "#fafafa",
-  color: "#1d1f28",
-  buttonBg: "#c5718d",
-  primary: "#c70101",
-  navFont: "#fff",
+  primary: "#c70101", //red
+  background: "#fafafa", //darker white
+  text: "#171717", //lighter black
+  button: "#c70101", //red
+  btnText: "#fff", //white
+  navFont: "#fff", //white
   borderSharp: "#000",
-  borderLight: "#d3d5d7",
+  border: "#d3d5d7",
 };
 
 export const darkTheme = {
-  background: "#444444",
-  color: "#fafafa",
-  buttonBg: "#515d90",
-  primary: "#171717",
+  primary: "#000", //black
+  background: "#171717", //lighter black
+  text: "#FFFAFA", //white
+  button: "#d3d5d7", //light gray
+  btnText: "#171717", //lighter black
   navFont: "#ededed",
   bordersharp: "#fff",
-  borderLight: '#fafafa"',
+  border: '#fafafa"',
 };
+
+// button: "#c5718d",
+// background: "#050517",
+// background: "#d3d5d7",
+// buttonBg: "#515d90",
