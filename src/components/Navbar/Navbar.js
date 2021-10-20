@@ -51,7 +51,7 @@ export const Navbar = () => {
             <ThemeToggler themeToggler={themeToggler} />
           </TOGGLE_THEME>
         </NAV_CONTAINER>
-        {open ? (
+        {/* {open ? (
           <MOBILE_CONTAINER>
             <MOBILE_WRAPPER>
               <MOBILE_CONTACT>
@@ -77,7 +77,7 @@ export const Navbar = () => {
               </MOB_LINKS>
             </MOBILE_WRAPPER>
           </MOBILE_CONTAINER>
-        ) : null}
+        ) : null} */}
       </NAV>
       <SwitchRoutes />
     </Router>

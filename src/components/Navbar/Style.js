@@ -171,6 +171,7 @@ export const MOBILE_CONTACT = styled.div`
 export const MOB_LINKS = styled.ul`
   display: flex;
   flex-direction: column;
+  background: ${({ theme }) => theme.background};
 `;
 
 export const MOB_LINK = styled(Link)``;
