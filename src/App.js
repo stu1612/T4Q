@@ -4,6 +4,8 @@ import { ThemeContext } from "./contexts/ThemeContext";
 import { GlobalStyles } from "./styles/Global";
 import { lightTheme, darkTheme } from "./styles/Theme";
 import { Navbar } from "./components/Navbar/Navbar";
+import { OnLoad } from "./pages/OnLoad";
+import { LoginContextProvider } from "./contexts/LoginContext";
 
 function App() {
   const { theme, themeToggler } = useContext(ThemeContext);
@@ -20,10 +22,13 @@ function App() {
   }, []);
 
   return !isLoading ? (
-    <ThemeProvider theme={selectedTheme}>
-      <GlobalStyles />
-      <Navbar />
-    </ThemeProvider>
+    <LoginContextProvider>
+      <ThemeProvider theme={selectedTheme}>
+        <GlobalStyles />
+        <OnLoad />
+        <Navbar />
+      </ThemeProvider>
+    </LoginContextProvider>
   ) : (
     <div>
       <h3>Loading ...</h3>
