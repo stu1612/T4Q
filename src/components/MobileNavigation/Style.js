@@ -46,7 +46,7 @@ export const MobileNavigationLinks = styled.ul`
   /* background: ${({ theme }) => theme.background}; */
 `;
 
-export const MobLink = styled(Link)`
+export const MobLink = styled.li`
   color: ${({ theme }) => theme.text};
   font-family: "Sora", sans-serif;
   font-size: 14px;
@@ -67,4 +67,5 @@ export const Wrapper = styled(Link)`
   border-bottom: 1px solid #d3d5d7;
   padding: 0 12px;
   cursor: pointer;
+  text-decoration: none;
 `;
