@@ -20,7 +20,8 @@ export const SideBarNavigation = ({ open, isOpen }) => {
     <MobileContainer>
       <MobileNavigation>
         <MobileContactLink>
-          <Button title="kontakt" />
+          {/* <Button title="kontakt" onClick={() => console.log("helloooo")} /> */}
+          <button onClick={() => console.log("helloooo")}>Hello</button>
         </MobileContactLink>
         <MobileNavigationLinks>
           <Wrapper to="/" onClick={toggle}>

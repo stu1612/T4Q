@@ -1,13 +1,25 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import styled from "styled-components";
 import { Button } from "../components/Button/Button";
 
+import { LoginContext } from "../contexts/LoginContext";
+
 export const OnLoad = () => {
+  const { enterApp, videoPlaying } = useContext(LoginContext);
+  const [login, setLogin] = useState(false);
+
+  const consoleTesting = () => {
+    console.log("testing");
+  };
   return (
-    <Wrapper>
-      <h1>Hello</h1>
-      <Button title="Enter" onClick={null} />
-    </Wrapper>
+    <>
+      {login ? (
+        <Wrapper>
+          <h1 onClick={consoleTesting}>Hello</h1>
+          <Button title="EnterS" onClick={consoleTesting} />
+        </Wrapper>
+      ) : null}
+    </>
   );
 };
 
@@ -19,6 +31,10 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 999;
+  z-index: 20;
   position: absolute;
+`;
+
+const NewWrapper = styled(Wrapper)`
+  top: 50;
 `;

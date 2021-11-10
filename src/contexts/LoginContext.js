@@ -3,13 +3,13 @@ import { createContext, useState } from "react";
 export const LoginContext = createContext();
 
 export const LoginContextProvider = ({ children }) => {
-  const [login, setLogin] = useState(false);
+  const [videoPlaying, setVideoPlaying] = useState(true);
 
   const enterApp = () => {
-    setLogin(!login);
+    setVideoPlaying(false);
   };
   return (
-    <LoginContext.Provider value={(enterApp, login, setLogin)}>
+    <LoginContext.Provider value={(enterApp, videoPlaying, setVideoPlaying)}>
       {children}
     </LoginContext.Provider>
   );
