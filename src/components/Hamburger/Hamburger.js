@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { Sling as Hamburger } from "hamburger-react";
 
 export const HamburgerMenu = ({ open, isOpen }) => {
-  //   const [open, isOpen] = useState(false);
-
   return (
     <Hamburger
       rounded

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const MobileContainer = styled.div`
-  background: ${({ theme }) => theme.background};
+  background: ${({ theme }) => theme.navBackground};
   position: fixed;
   top: 73px;
   right: 0;
@@ -58,7 +58,7 @@ export const MobLink = styled(Link)`
   text-transform: uppercase;
 `;
 
-export const Wrapper = styled.div`
+export const Wrapper = styled(Link)`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -66,4 +66,5 @@ export const Wrapper = styled.div`
   height: 50px;
   border-bottom: 1px solid #d3d5d7;
   padding: 0 12px;
+  cursor: pointer;
 `;

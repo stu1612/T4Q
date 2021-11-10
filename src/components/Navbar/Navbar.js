@@ -10,7 +10,7 @@ import {
   NavHeader,
   NavContainer,
   ToggleNavigation,
-  TOGGLE_THEME,
+  Toggler,
 } from "./Style";
 import { Logo } from "../Logo/Logo";
 import { HamburgerMenu } from "../Hamburger/Hamburger";
@@ -30,10 +30,14 @@ export const Navbar = () => {
           <ToggleNavigation>
             <HamburgerMenu open={open} isOpen={isOpen} />
           </ToggleNavigation>
-          {!open ? <DesktopNavigation /> : <SideBarNavigation />}
-          <TOGGLE_THEME>
+          {!open ? (
+            <DesktopNavigation />
+          ) : (
+            <SideBarNavigation open={open} isOpen={isOpen} />
+          )}
+          <Toggler>
             <ThemeToggler themeToggler={themeToggler} />
-          </TOGGLE_THEME>
+          </Toggler>
         </NavContainer>
       </Nav>
       <SwitchRoutes />

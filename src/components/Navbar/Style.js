@@ -105,7 +105,7 @@ export const NavLink = styled(Link)`
   } */
 `;
 
-export const TOGGLE_THEME = styled.div`
+export const Toggler = styled.div`
   padding: 0 12px;
   display: flex;
   align-items: center;

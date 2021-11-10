@@ -1,6 +1,8 @@
 export const lightTheme = {
   primary: "#c70101", //red
-  background: "#fafafa", //darker white
+  navBackground: "#fafafa", //darker white
+  pureBackground: "#fafafa", //darker white
+  shadedBackground: "#f8f8f8",
   text: "#171717", //lighter black
   button: "#c70101", //red
   btnText: "#fff", //white
@@ -11,7 +13,9 @@ export const lightTheme = {
 
 export const darkTheme = {
   primary: "#000", //black
-  background: "#171717", //lighter black
+  navBackground: "#171717", //lighter black
+  pureBackground: "#000", //black
+  shadedBackground: "#171717", //lighter black
   text: "#FFFAFA", //white
   button: "#d3d5d7", //light gray
   btnText: "#171717", //lighter black

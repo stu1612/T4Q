@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import { Button } from "../Button/Button";
 import { FaChevronRight } from "react-icons/fa";
 
@@ -11,7 +12,10 @@ import {
   Wrapper,
 } from "./Style";
 
-export const SideBarNavigation = () => {
+export const SideBarNavigation = ({ open, isOpen }) => {
+  const toggle = () => {
+    isOpen(!open);
+  };
   return (
     <MobileContainer>
       <MobileNavigation>
@@ -19,24 +23,28 @@ export const SideBarNavigation = () => {
           <Button title="kontakt" />
         </MobileContactLink>
         <MobileNavigationLinks>
-          <Wrapper>
-            <MobLink to="/">Hem</MobLink>
-            <FaChevronRight />
+          <Wrapper to="/" onClick={toggle}>
+            <MobLink>Hem</MobLink>
+            <Icon />
           </Wrapper>
-          <Wrapper>
-            <MobLink to="/">Herr</MobLink>
-            <FaChevronRight />
+          <Wrapper to="/herr" onClick={toggle}>
+            <MobLink>Herr</MobLink>
+            <Icon />
           </Wrapper>
-          <Wrapper>
-            <MobLink to="/">Dam</MobLink>
-            <FaChevronRight />
+          <Wrapper to="/dam" onClick={toggle}>
+            <MobLink>Dam</MobLink>
+            <Icon />
           </Wrapper>
-          <Wrapper>
-            <MobLink to="/">Junior</MobLink>
-            <FaChevronRight />
+          <Wrapper to="/junior" onClick={toggle}>
+            <MobLink>Junior</MobLink>
+            <Icon />
           </Wrapper>
         </MobileNavigationLinks>
       </MobileNavigation>
     </MobileContainer>
   );
 };
+
+const Icon = styled(FaChevronRight)`
+  color: ${({ theme }) => theme.text};
+`;
