@@ -16,19 +16,19 @@ export const Video = () => {
         muted={true}
         style={{ objectFit: "contain" }}
       />
-      <Overlay>
+      {/* <Overlay>
         <h2>Hello</h2>
         <Button title="Click me" />
-      </Overlay>
+      </Overlay> */}
     </Container>
   );
 };
 
 const Container = styled.div`
-  height: 100vh;
+  /* height: 100vh;
   width: 100vw;
   position: relative;
-  /* z-index: 20; */
+  z-index: 20; */
 `;
 
 const Overlay = styled.div`

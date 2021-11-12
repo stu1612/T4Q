@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const Layout = ({ children }) => {
   return (
     <Container>
-      <div>{children}</div>
+      {children}
       <Sponsors>SPONSORS</Sponsors>
       <Footer>FOOTER</Footer>
     </Container>
@@ -20,7 +20,6 @@ const Container = styled.div`
   min-height: 100vh;
   height: 100%;
   width: 100%;
-  position: absolute;
 `;
 
 const Sponsors = styled.div`
