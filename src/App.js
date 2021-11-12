@@ -25,7 +25,7 @@ function App() {
     <LoginContextProvider>
       <ThemeProvider theme={selectedTheme}>
         <GlobalStyles />
-        <OnLoad />
+        {/* <OnLoad /> */}
         <Navbar />
       </ThemeProvider>
     </LoginContextProvider>

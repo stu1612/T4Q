@@ -1,39 +1,42 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Button } from "../components/Button/Button";
-
-import { LoginContext } from "../contexts/LoginContext";
+import { Video } from "../components/Video/Video";
 
 export const OnLoad = () => {
-  const { enterApp, videoPlaying } = useContext(LoginContext);
   const [login, setLogin] = useState(false);
 
-  const consoleTesting = () => {
-    console.log("testing");
+  const handleClick = () => {
+    setLogin(true);
   };
   return (
-    <>
-      {login ? (
-        <Wrapper>
-          <h1 onClick={consoleTesting}>Hello</h1>
-          <Button title="EnterS" onClick={consoleTesting} />
-        </Wrapper>
+    <Wrapper>
+      {!login ? (
+        <Video>
+          <Overlay>
+            <h1>Hello</h1>
+            <Button title="EnterS" onClick={handleClick} />
+          </Overlay>
+        </Video>
       ) : null}
-    </>
+    </Wrapper>
   );
 };
 
 const Wrapper = styled.div`
-  background-color: yellow;
   width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 20;
   position: absolute;
+  top: 10;
+  bottom: 0;
+  z-index: 999;
 `;
+
+const Overlay = styled.div``;
 
 const NewWrapper = styled(Wrapper)`
   top: 50;
