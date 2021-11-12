@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import { Footer } from "../Footer/index";
 
 export const Layout = ({ children }) => {
   return (
     <Container>
       {children}
       <Sponsors>SPONSORS</Sponsors>
-      <Footer>FOOTER</Footer>
+      <Footer />
     </Container>
   );
 };
@@ -24,8 +25,4 @@ const Container = styled.div`
 
 const Sponsors = styled.div`
   background: yellow;
-`;
-
-const Footer = styled.footer`
-  background: pink;
 `;
