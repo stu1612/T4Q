@@ -8,7 +8,7 @@ export const Footer = () => {
     <>
       <SocialMediaContainer>
         <SocialMediaLinks />
-        <Button title="Kontakt" bgColor="#c70101" />
+        <Button title="Kontakt" />
       </SocialMediaContainer>
       <Copyright>
         <Text>&copy;TeamFourthQuarter</Text>

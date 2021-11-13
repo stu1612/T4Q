@@ -14,8 +14,8 @@ export const Opening = () => {
     <Wrapper>
       <Video />
       <Overlay>
-        <h2>Hello</h2>
-        <Button title="enter" onClick={handleClick} />
+        <h1>Team Fourth Quarter</h1>
+        <Button title="Välkommen" onClick={handleClick} />
       </Overlay>
     </Wrapper>
   );

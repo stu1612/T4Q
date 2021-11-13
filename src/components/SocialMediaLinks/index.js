@@ -30,4 +30,9 @@ const IconWrapper = styled.a`
   align-items: center;
   margin: 0 0.5rem;
   cursor: pointer;
+  transition: ease-in 0.2s;
+
+  &:hover {
+    background-color: #c70101;
+  }
 `;
