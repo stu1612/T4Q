@@ -41,7 +41,7 @@ export const NavLink = styled(Link)`
     left: 50%;
     border-radius: 16px;
     position: absolute;
-    background: ${({ theme }) => theme.color};
+    background: ${({ theme }) => theme.borderLine};
     transition: width 0.2s ease 0s, left 0.2s ease 0s;
     width: 0;
   }
@@ -49,8 +49,4 @@ export const NavLink = styled(Link)`
     width: 100%;
     left: 0;
   }
-
-  /* &:active {
-    border-bottom: 3px solid white;
-  } */
 `;

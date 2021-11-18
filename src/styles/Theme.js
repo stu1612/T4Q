@@ -9,6 +9,7 @@ export const lightTheme = {
   navFont: "#fff", //white
   borderSharp: "#000",
   border: "#d3d5d7",
+  borderLine: "#171717",
 };
 
 export const darkTheme = {
@@ -22,6 +23,7 @@ export const darkTheme = {
   navFont: "#ededed",
   bordersharp: "#fff",
   border: '#fafafa"',
+  borderLine: "#c70101",
 };
 
 // button: "#c5718d",

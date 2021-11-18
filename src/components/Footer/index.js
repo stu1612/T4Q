@@ -6,18 +6,20 @@ import { SocialMediaLinks } from "../SocialMediaLinks";
 export const Footer = () => {
   return (
     <>
-      <SocialMediaContainer>
-        <SocialMediaLinks />
+      <Container>
+        <IconWrapper>
+          <SocialMediaLinks />
+        </IconWrapper>
         <Button title="Kontakt" />
-      </SocialMediaContainer>
+      </Container>
       <Copyright>
-        <Text>&copy;TeamFourthQuarter</Text>
+        <Text>&copy;TeamFourthQuarter 2021 | Helsingborg</Text>
       </Copyright>
     </>
   );
 };
 
-const SocialMediaContainer = styled.div`
+const Container = styled.div`
   background: #4a4a4a;
   height: 30vh;
   width: 100%;
@@ -25,6 +27,19 @@ const SocialMediaContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  } ;
+`;
+
+const IconWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+
+  @media (max-width: 768px) {
+    margin-bottom: 1rem;
+  } ;
 `;
 
 const Copyright = styled.footer`
