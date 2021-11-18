@@ -14,10 +14,9 @@ body {
   overflow-anchor: none;
 }
 
-p {
-}
 
-h1 {
+
+/* h1 {
   font-size: calc(1.775rem + 1.5vw);
   font-weight: 900;
 }
@@ -37,5 +36,5 @@ h4,
 h5,
 h6 {
   font-family: "Merriweather", serif;
-}
+} */
 `;

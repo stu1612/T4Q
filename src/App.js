@@ -4,6 +4,7 @@ import { ThemeContext } from "./contexts/ThemeContext";
 import { GlobalStyles } from "./styles/Global";
 import { lightTheme, darkTheme } from "./styles/Theme";
 import { Navbar } from "./components/Navbar/Navbar";
+import { AppLoading } from "./components/OnPage_Loading/index";
 
 function App() {
   const { theme, themeToggler } = useContext(ThemeContext);
@@ -19,15 +20,20 @@ function App() {
     return () => window.removeEventListener("load", handleLoading);
   }, []);
 
-  return !isLoading ? (
+  // return !isLoading ? (
+  //   <ThemeProvider theme={selectedTheme}>
+  //     <GlobalStyles />
+  //     <Navbar />
+  //   </ThemeProvider>
+  // ) : (
+  //   <AppLoading />
+  // );
+
+  return (
     <ThemeProvider theme={selectedTheme}>
       <GlobalStyles />
       <Navbar />
     </ThemeProvider>
-  ) : (
-    <div>
-      <h3>Loading ...</h3>
-    </div>
   );
 }
 
