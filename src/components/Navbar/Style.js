@@ -1,9 +1,10 @@
 /* eslint-disable no-undef */
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 // DESKTOP STYLES
-export const Nav = styled.nav`
+export const Nav = styled(motion.nav)`
   background: ${({ theme }) => theme.primary};
   display: flex;
   align-items: center;

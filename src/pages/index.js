@@ -7,7 +7,7 @@ import styled from "styled-components";
 import { Button } from "../components/Button/Button";
 import { Video } from "../components/Video/Video";
 // Animation imports
-import { titleAnim, buttonTitleAnim } from "../animations/animations";
+import { titleAnim, buttonTitleAnim } from "../animations/onLoad_Anim";
 
 export const Opening = () => {
   let history = useHistory();
@@ -65,4 +65,12 @@ const StyledTitle = styled(motion.h1)`
   font-size: clamp(4rem, 1vw + 1rem, 1rem);
   text-align: center;
   color: #fffafa;
+
+  @media (max-width: 1024px) {
+    margin-bottom: 2rem;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 2rem;
+  }
 `;

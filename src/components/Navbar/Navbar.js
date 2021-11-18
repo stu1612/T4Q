@@ -1,7 +1,8 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { ThemeContext } from "../../contexts/ThemeContext";
 import { ThemeToggler } from "../ThemeToggler/ThemeToggler";
+import { useViewportScroll } from "framer-motion";
 import { SwitchRoutes } from "../../routes/Switch";
 import { DesktopNavigation } from "../DesktopNavigation/index";
 
@@ -20,9 +21,39 @@ export const Navbar = () => {
   const { themeToggler } = useContext(ThemeContext);
   const [open, isOpen] = useState(false);
 
+  const { scrollY } = useViewportScroll();
+  const [hidden, setHidden] = useState(false);
+
+  useEffect(() => {
+    return scrollY.onChange(() => updateScrollPos());
+  });
+
+  const updateScrollPos = () => {
+    if (scrollY?.current < scrollY?.prev) {
+      setHidden(false);
+      console.log("visible");
+    } else if (scrollY?.current > 100 && scrollY?.current > scrollY?.prev) {
+      setHidden(true);
+      console.log("hidden");
+    }
+  };
+
+  // Remove hide scroll bar functionality when screensize is less than 1024px
+  let scrollAnim = {};
+  const isMobile = window.innerWidth < 1024;
+  if (!isMobile) {
+    scrollAnim = {
+      hidden: { opacity: 0 },
+      show: {
+        opacity: 0,
+        transition: { ease: "easeOut", type: "spring", duration: 2 },
+      },
+    };
+  }
+
   return (
     <Router>
-      <Nav>
+      <Nav variants={scrollAnim} animate={hidden ? "hidden" : "visible"}>
         <NavHeader>
           <Logo />
         </NavHeader>
