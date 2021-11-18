@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import { Footer } from "../Footer/index";
+import { Partners } from "../Sponsors";
 
 export const Layout = ({ children }) => {
   return (
     <Container>
       {children}
-      <Sponsors>SPONSORS</Sponsors>
+      <Partners />
       <Footer />
     </Container>
   );
@@ -21,8 +22,4 @@ const Container = styled.div`
   min-height: 100vh;
   height: 100%;
   width: 100%;
-`;
-
-const Sponsors = styled.div`
-  background: yellow;
 `;
