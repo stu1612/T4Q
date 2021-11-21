@@ -1,3 +1,5 @@
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 import React, { useContext, useState, useEffect } from "react";
 import { ThemeProvider } from "styled-components";
 import { ThemeContext } from "./contexts/ThemeContext";

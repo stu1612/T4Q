@@ -6,7 +6,12 @@ export const titleAnim = {
   show: {
     scale: 1,
     opacity: 1,
-    transition: { duration: 4, ease: "easeOut", type: "spring", delay: 0.5 },
+    transition: {
+      duration: 2,
+      ease: "linear",
+      type: "spring",
+      delay: 0.5,
+    },
   },
 };
 
@@ -20,8 +25,10 @@ export const buttonTitleAnim = {
     opacity: 1,
     transition: {
       duration: 1,
-      ease: "easeOut",
-      delay: 0.5,
+      type: "spring",
+      // stiffness: 100,
+      ease: "linear",
+      delay: 1.3,
     },
   },
 };
