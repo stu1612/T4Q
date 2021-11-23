@@ -10,7 +10,7 @@ import { Schedule } from "../../Model/Schedule";
 
 export const Carousel = () => {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
@@ -26,7 +26,6 @@ export const Carousel = () => {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: false,
         },
       },
       {
@@ -35,7 +34,6 @@ export const Carousel = () => {
           slidesToShow: 2,
           slidesToScroll: 2,
           initialSlide: 2,
-          dots: false,
         },
       },
       {
@@ -43,7 +41,6 @@ export const Carousel = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          dots: false,
         },
       },
     ],

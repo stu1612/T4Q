@@ -21,8 +21,8 @@ export const SocialMediaLinks = () => {
 
 const IconWrapper = styled.a`
   background: #5a5a5a;
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
   display: flex;
   flex-direction: column;
@@ -35,4 +35,9 @@ const IconWrapper = styled.a`
   &:hover {
     background-color: #c70101;
   }
+
+  @media (min-width: 620px) {
+    height: 50px;
+    width: 50px;
+  } ;
 `;

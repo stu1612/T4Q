@@ -67,7 +67,7 @@ const TextWrapper = styled.div`
 
 const Text = styled.p`
   font-family: "Ubuntu", sans-serif;
-  font-size: 0.8rem;
+  font-size: clamp(0.9rem, 1vw, 2rem);
   color: #171717;
   font-weight: 200;
   padding: 0.2em 0;
@@ -110,6 +110,7 @@ const FixtureInfo = styled.h4`
   border-radius: 8px;
   padding: 10px;
   margin: 0 0.8rem;
+  font-family: "Sora";
 `;
 
 const ResultInfo = styled(FixtureInfo)`
@@ -126,7 +127,7 @@ const TextRow = styled.div`
 
 const Team = styled.h3`
   font-family: "Ubuntu", sans-serif;
-  font-size: 0.8rem;
+  font-size: clamp(1rem, 1vw, 2rem);
   color: #171717;
   font-weight: 600;
   text-transform: uppercase;
@@ -134,8 +135,8 @@ const Team = styled.h3`
 
 const Vs = styled.p`
   font-family: "Ubuntu", sans-serif;
-  font-size: 0.8rem;
+  font-size: clamp(1rem, 1vw, 2rem);
   color: #171717;
-  font-weight: 200;
+  font-weight: 100;
   padding: 0 0.5rem;
 `;

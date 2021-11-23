@@ -21,7 +21,8 @@ export const Footer = () => {
 
 const Container = styled.div`
   background: #4a4a4a;
-  height: 30vh;
+  padding: 5rem 0;
+  height: auto;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -53,5 +54,8 @@ const Copyright = styled.footer`
 `;
 
 const Text = styled.p`
-  color: #fff;
+  color: #fafafa;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 200;
 `;

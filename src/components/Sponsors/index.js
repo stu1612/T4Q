@@ -20,8 +20,8 @@ export const Partners = () => {
 };
 
 const Container = styled.div`
-  min-height: 50vh;
   height: auto;
+  padding: 5rem 0;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -37,7 +37,12 @@ const Wrapper = styled.a`
 `;
 
 const Logo = styled.img`
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
   object-fit: contain;
+
+  @media (min-width: 800px) {
+    height: 100px;
+    width: 100px;
+  }
 `;
