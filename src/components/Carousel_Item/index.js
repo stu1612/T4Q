@@ -1,5 +1,4 @@
 import React from "react";
-
 import styled from "styled-components";
 
 export const CarouselItem = ({
@@ -14,10 +13,10 @@ export const CarouselItem = ({
 }) => {
   return (
     <Container>
-      <div>
+      <TextWrapper>
         <Text>{date}</Text>
         <Text>{venue}</Text>
-      </div>
+      </TextWrapper>
       <Row>
         <ImageContainer>
           <TeamBadge src={homeImg} alt="team logo" />
@@ -42,18 +41,28 @@ export const CarouselItem = ({
 };
 
 const Container = styled.div`
-  height: 50vh;
+  height: 100%;
+  padding: 4rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 18em;
   border-radius: 16px;
+  background: #fff;
 
   &:hover {
     transition: all 0.2s ease-out;
     box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
   }
+
+  @media (max-width: 320px) {
+    width: 16em;
+  }
+`;
+
+const TextWrapper = styled.div`
+  text-align: center;
 `;
 
 const Text = styled.p`
@@ -62,6 +71,7 @@ const Text = styled.p`
   color: #171717;
   font-weight: 200;
   padding: 0.2em 0;
+  text-transform: capitalize;
 `;
 
 const Row = styled.div`
@@ -78,11 +88,17 @@ const ImageContainer = styled.div`
   height: 100%;
   width: 60px;
   margin: 0 5px;
+
+  @media (max-width: 320px) {
+    height: 50px;
+    width: 50px;
+  }
 `;
 
 const TeamBadge = styled.img`
   object-fit: contain;
   height: 100%;
+  width: 100%;
 `;
 
 const FixtureInfo = styled.h4`
@@ -93,6 +109,7 @@ const FixtureInfo = styled.h4`
   flex-direction: column;
   border-radius: 8px;
   padding: 10px;
+  margin: 0 0.8rem;
 `;
 
 const ResultInfo = styled(FixtureInfo)`

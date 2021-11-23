@@ -4,24 +4,24 @@ import "moment/locale/sv";
 import logo from "../assets/images/logo.png";
 import img_eos from "../assets/images/clubs/eos.png";
 import img_kal from "../assets/images/clubs/kal.png";
-import img_aik from "../assets/images/clubs/aik.png";
+import img_aik2 from "../assets/images/clubs/aik2.jpeg";
 import img_trb from "../assets/images/clubs/trb.png";
 import img_norr from "../assets/images/clubs/norr.png";
 import img_rig from "../assets/images/clubs/rig.jpeg";
 import img_upp from "../assets/images/clubs/upp.jpeg";
-import img_ock from "../assets/images/clubs/ock.png";
+import img_ock2 from "../assets/images/clubs/ock2.png";
 import img_hog from "../assets/images/clubs/hög.png";
 import img_hbg from "../assets/images/clubs/hbg.jpeg";
 import img_wby from "../assets/images/clubs/wetterbyg.jpeg";
 
 const t4q = {
-  name: "T4Q",
+  name: "Team4Q",
   venue: "GA-Hallen, HBG",
   img: logo,
 };
 
 const kal = {
-  name: "Kalmar Saints",
+  name: "Kalmar",
   venue: "Akea Arena",
   img: img_kal,
 };
@@ -35,11 +35,11 @@ const eos = {
 const aik = {
   name: "AIK Basket",
   venue: "Vasalundshallen",
-  img: img_aik,
+  img: img_aik2,
 };
 
 const trb = {
-  name: "Trelleborg Pirate",
+  name: "Trelleborg",
   venue: "Våstervångshallen, Trelleborg",
   img: img_trb,
 };
@@ -65,11 +65,11 @@ const upp = {
 const ock = {
   name: "Ockelbo",
   venue: "Kuxahallen",
-  img: img_ock,
+  img: img_ock2,
 };
 
 const wby = {
-  name: "Wetterbygden Stars",
+  name: "Wetterbygden",
   venue: "Huskvarnen Sporthall",
   img: img_wby,
 };

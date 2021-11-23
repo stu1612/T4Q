@@ -28,6 +28,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  background: #fff;
 `;
 
 const Wrapper = styled.a`

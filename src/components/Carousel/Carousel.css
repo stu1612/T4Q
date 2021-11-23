@@ -1,21 +1,32 @@
 .slick-slider {
-  width: 90%;
+  width: 100%;
 }
 
 .slick-list {
-  height: 50vh;
+  height: 400px;
   padding: 0 !important;
 }
 
 .slick-slide {
-  background: white;
   display: flex !important;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 50vh;
-  margin: 0 10px;
+  height: 380px;
+  margin: 15px;
   width: 18em !important;
   border-radius: 8px;
   cursor: pointer;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #171717;
+}
+
+@media screen and (max-width: 600px) {
+  .slick-prev:before,
+  .slick-next:before {
+    display: none !important;
+  }
 }

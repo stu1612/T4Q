@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Carousel.css";
 import { CarouselItem } from "../Carousel_Item";
+import styled from "styled-components";
 
 import { Schedule } from "../../Model/Schedule";
 
@@ -14,10 +15,9 @@ export const Carousel = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
-    className: "center",
+    // className: "center",
     centerMode: true,
     initialSlide: 1,
-    // centerPadding: "60px",
 
     responsive: [
       {
@@ -26,7 +26,7 @@ export const Carousel = () => {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true,
+          dots: false,
         },
       },
       {
@@ -35,6 +35,7 @@ export const Carousel = () => {
           slidesToShow: 2,
           slidesToScroll: 2,
           initialSlide: 2,
+          dots: false,
         },
       },
       {
@@ -42,31 +43,13 @@ export const Carousel = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          dots: false,
         },
       },
     ],
   };
   return (
-    // <Slider {...settings}>
-    //   {Schedule.map((fixture) => (
-    //     <>
-    //       <p>{fixture.home}</p>
-    //       <p>{fixture.away}</p>
-    //       <p>{fixture.venue}</p>
-    //       <p>{fixture.time}</p>
-    //       <p>{fixture.date}</p>
-    //       <p>{fixture.result}</p>
-    //     </>
-    //   ))}
-    // </Slider>
-    <div
-      style={{
-        width: "90%",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-      }}
-    >
+    <Container>
       <Slider {...settings}>
         {Schedule.map((match) => (
           <CarouselItem
@@ -81,6 +64,18 @@ export const Carousel = () => {
           />
         ))}
       </Slider>
-    </div>
+    </Container>
   );
 };
+
+const Container = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+
+  @media (min-width: 600px) {
+    width: 90%;
+  }
+`;
