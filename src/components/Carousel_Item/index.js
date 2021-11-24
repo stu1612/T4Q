@@ -110,7 +110,7 @@ const FixtureInfo = styled.h4`
   border-radius: 8px;
   padding: 10px;
   margin: 0 0.8rem;
-  font-family: "Sora";
+  font-family: "Sora", sans-serif;
 `;
 
 const ResultInfo = styled(FixtureInfo)`
