@@ -10,6 +10,10 @@ export const NextGame = () => {
   const [fixture, setFixture] = useState();
 
   //   useEffect(() => {
+  //     setUpcoming(Schedule);
+  //   }, []);
+
+  //   useEffect(() => {
   //     Schedule.filter((fixture) => fixture.jsDate > date).map(
   //       (filteredFixtures) => setUpcoming([filteredFixtures])
   //     );
@@ -22,37 +26,55 @@ export const NextGame = () => {
   //         .then(setFixture(filteredFixtures[0]))
   //     );
   //   }, [date]);
-  useEffect(() => {
-    setUpcoming(
-      Schedule.filter((fixture) => fixture.jsDate > date).map(
-        (filteredFixtures) => filteredFixtures
-      )
-    );
-  }, [date]);
+  //   useEffect(() => {
+  //     setUpcoming(
+  //       Schedule.filter((fixture) => fixture.jsDate > date).map(
+  //         (filteredFixtures) => filteredFixtures
+  //       )
+  //     );
+  //   }, [date]);
 
-  useEffect(() => {
-    setFixture(upcoming[0]);
-  }, [upcoming]);
+  //   useEffect(() => {
+  //     setFixture(upcoming[0]);
+  //   }, [upcoming]);
+
+  //   const item = Schedule.filter((fixture) => fixture.jsDate > date).map(
+  //     (filteredfixture) => console.log(filteredfixture.home)
+  //   );
+  //   const item = Schedule.filter((fixture) => fixture.jsDate > date).find(
+  //     (index) => (index = 0)
+  //   );
+
+  //   console.log(item);
+
+  const game = Schedule.find(({ jsDate }) => jsDate > date);
 
   return (
-    // <Container>
-    //   <Text>Nästa Match :</Text>
-    //   <Row>
-    //     <Text>{fixture.home}</Text>
-    //     <Vs>vs</Vs>
-    //     <Text>{fixture.away}</Text>
-    //   </Row>
-    //   <Text>{fixture.date}</Text>
-    // </Container>
     <Container>
       <Text>Nästa Match :</Text>
       <Row>
-        <Text>{fixture.home}</Text>
+        <Text>{game.home}</Text>
         <Vs>vs</Vs>
-        <Text>{fixture.away}</Text>
+        <Text>{game.away}</Text>
       </Row>
-      <Text>{fixture.date}</Text>
+      <Text>{game.date}</Text>
     </Container>
+
+    // <Container>
+    //   {Schedule.filter((fixture) => fixture.jsDate > date).map(
+    //     (filteredFixture) => (
+    //       <>
+    //         <Text>Nästa Match :</Text>
+    //         <Row>
+    //           <Text>{filteredFixture[0].home}</Text>
+    //           <Vs>vs</Vs>
+    //           <Text>{filteredFixture[0].away}</Text>
+    //         </Row>
+    //         <Text>{filteredFixture[0].date}</Text>
+    //       </>
+    //     )
+    //   )}
+    // </Container>
   );
 };
 
