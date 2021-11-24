@@ -4,22 +4,24 @@ import { Schedule } from "../../Model/Schedule";
 import styled from "styled-components";
 
 export const NextGame = () => {
-  const [date, setDate] = useState(new Date());
+  const [todaysDate, setTodaysDate] = useState(new Date());
   const [fixture, setFixture] = useState({});
 
   useEffect(() => {
-    setFixture(Schedule.find(({ jsDate }) => jsDate > date));
-  }, [date]);
+    setFixture(Schedule.find(({ jsDate }) => jsDate > todaysDate));
+  }, [todaysDate]);
+
+  const { home, away, date } = fixture;
 
   return (
     <Container>
       <Text>Nästa Match :</Text>
       <Row>
-        <Text>{fixture.home}</Text>
+        <Text>{home}</Text>
         <Vs>vs</Vs>
-        <Text>{fixture.away}</Text>
+        <Text>{away}</Text>
       </Row>
-      <Text>{fixture.date}</Text>
+      <Text>{date}</Text>
     </Container>
   );
 };
