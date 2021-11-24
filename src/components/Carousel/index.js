@@ -17,7 +17,7 @@ export const Carousel = () => {
     slidesToScroll: 3,
     // className: "center",
     centerMode: true,
-    initialSlide: 1,
+    initialSlide: 6,
 
     responsive: [
       {
@@ -29,7 +29,7 @@ export const Carousel = () => {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 768,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -50,6 +50,7 @@ export const Carousel = () => {
       <Slider {...settings}>
         {Schedule.map((match) => (
           <CarouselItem
+            key={match.date}
             home={match.home}
             homeImg={match.home_img}
             away={match.away}

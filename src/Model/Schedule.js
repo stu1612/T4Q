@@ -57,7 +57,7 @@ const rig = {
 };
 
 const upp = {
-  name: "Uppsala Basket",
+  name: "Uppsala",
   venue: "Upplands Bilforum UIF Arena",
   img: img_upp,
 };
@@ -75,13 +75,13 @@ const wby = {
 };
 
 const hbg = {
-  name: "Helsingborg BBK",
+  name: "Helsingborg",
   venue: "GA-Hallen, HBG",
   img: img_hbg,
 };
 
 const hog = {
-  name: "Högsbo Basket",
+  name: "Högsbo",
   venue: "Gothia Arena 2",
   img: img_hog,
 };
@@ -97,6 +97,7 @@ export const Schedule = [
     venue: eos.venue,
     time: "15:00",
     date: moment("2021-09-25").format("dddd, MMM Do"),
+    jsDate: new Date("2021-09-25"),
     result: "45-67",
   },
   {
@@ -107,6 +108,7 @@ export const Schedule = [
     venue: t4q.venue,
     time: "15:00",
     date: moment("2021-10-02").format("dddd, MMM Do"),
+    jsDate: new Date("2021-10-02"),
     result: "73-85",
   },
   {
@@ -117,6 +119,7 @@ export const Schedule = [
     venue: aik.venue,
     time: "15:00",
     date: moment("2021-10-10").format("dddd, MMM Do"),
+    jsDate: new Date("2021-10-10"),
     result: "76-95",
   },
   {
@@ -127,6 +130,7 @@ export const Schedule = [
     venue: aik.venue,
     time: "15:00",
     date: moment("2021-10-21").format("dddd, MMM Do"),
+    jsDate: new Date("2021-10-21"),
     result: "108-81",
   },
   {
@@ -137,6 +141,7 @@ export const Schedule = [
     venue: trb.venue,
     time: "15:00",
     date: moment("2021-10-30").format("dddd, MMM Do"),
+    jsDate: new Date("2021-10-30"),
     result: "118-99",
   },
   {
@@ -147,6 +152,7 @@ export const Schedule = [
     venue: t4q.venue,
     time: "15:00",
     date: moment("2021-11-07").format("dddd, MMM Do"),
+    jsDate: new Date("2021-11-07"),
     result: "75-85",
   },
   {
@@ -157,6 +163,7 @@ export const Schedule = [
     venue: upp.venue,
     time: "15:00",
     date: moment("2021-11-13").format("dddd, MMM Do"),
+    jsDate: new Date("2021-11-13"),
     result: "107-75",
   },
   {
@@ -167,6 +174,7 @@ export const Schedule = [
     venue: t4q.venue,
     time: "15:00",
     date: moment("2021-11-21").format("dddd, MMM Do"),
+    jsDate: new Date("2021-11-21"),
     result: "",
   },
   {
@@ -177,6 +185,7 @@ export const Schedule = [
     venue: ock.venue,
     time: "16:00",
     date: moment("2021-12-04").format("dddd, MMM Do"),
+    jsDate: new Date("2021-12-04"),
     result: "",
   },
   {
@@ -187,6 +196,7 @@ export const Schedule = [
     venue: t4q.venue,
     time: "15:00",
     date: moment("2021-12-11").format("dddd, MMM Do"),
+    jsDate: new Date("2021-12-11"),
     result: "",
   },
   {
@@ -197,6 +207,7 @@ export const Schedule = [
     venue: wby.venue,
     time: "13:00",
     date: moment("2021-12-18").format("dddd, MMM Do"),
+    jsDate: new Date("2021-12-18"),
     result: "",
   },
   {
@@ -206,7 +217,8 @@ export const Schedule = [
     away_img: hbg.img,
     venue: t4q.venue,
     time: "15:00",
-    date: moment("2021-01-08").format("dddd, MMM Do"),
+    date: moment("2022-01-08").format("dddd, MMM Do"),
+    jsDate: new Date("2022-01-08"),
     result: "",
   },
   {
@@ -216,7 +228,8 @@ export const Schedule = [
     away_img: t4q.img,
     venue: norr.venue,
     time: "16:00",
-    date: moment("2021-01-15").format("dddd, MMM Do"),
+    date: moment("2022-01-15").format("dddd, MMM Do"),
+    jsDate: new Date("2022-01-15"),
     result: "",
   },
   {
@@ -226,7 +239,8 @@ export const Schedule = [
     away_img: wby.img,
     venue: t4q.venue,
     time: "15:00",
-    date: moment("2021-01-22").format("dddd, MMM Do"),
+    date: moment("2022-01-22").format("dddd, MMM Do"),
+    jsDate: new Date("2022-01-22"),
     result: "",
   },
   {
@@ -236,7 +250,8 @@ export const Schedule = [
     away_img: t4q.img,
     venue: rig.venue,
     time: "13:00",
-    date: moment("2021-01-30").format("dddd, MMM Do"),
+    date: moment("2022-01-30").format("dddd, MMM Do"),
+    jsDate: new Date("2022-01-30"),
     result: "",
   },
   {
@@ -246,7 +261,8 @@ export const Schedule = [
     away_img: upp.img,
     venue: t4q.venue,
     time: "15:00",
-    date: moment("2021-02-05").format("dddd, MMM Do"),
+    date: moment("2022-02-05").format("dddd, MMM Do"),
+    jsDate: new Date("2022-02-05"),
     result: "",
   },
   {
@@ -256,7 +272,8 @@ export const Schedule = [
     away_img: t4q.img,
     venue: hbg.venue,
     time: "15:00",
-    date: moment("2021-02-12").format("dddd, MMM Do"),
+    date: moment("2022-02-12").format("dddd, MMM Do"),
+    jsDate: new Date("2022-02-12"),
     result: "",
   },
   {
@@ -266,7 +283,8 @@ export const Schedule = [
     away_img: ock.img,
     venue: t4q.venue,
     time: "15:00",
-    date: moment("2021-02-19").format("dddd, MMM Do"),
+    date: moment("2022-02-19").format("dddd, MMM Do"),
+    jsDate: new Date("2022-02-19"),
     result: "",
   },
   {
@@ -276,7 +294,8 @@ export const Schedule = [
     away_img: aik.img,
     venue: t4q.venue,
     time: "13:30",
-    date: moment("2021-02-27").format("dddd, MMM Do"),
+    date: moment("2022-02-27").format("dddd, MMM Do"),
+    jsDate: new Date("2022-02-27"),
     result: "",
   },
   {
@@ -286,7 +305,8 @@ export const Schedule = [
     away_img: t4q.img,
     venue: hog.venue,
     time: "15:30",
-    date: moment("2021-03-05").format("dddd, MMM Do"),
+    date: moment("2022-03-05").format("dddd, MMM Do"),
+    jsDate: new Date("2022-03-05"),
     result: "",
   },
   {
@@ -296,7 +316,8 @@ export const Schedule = [
     away_img: eos.img,
     venue: t4q.venue,
     time: "20:00",
-    date: moment("2021-03-09").format("dddd, MMM Do"),
+    date: moment("2022-03-09").format("dddd, MMM Do"),
+    jsDate: new Date("2022-03-09"),
     result: "",
   },
   {
@@ -306,7 +327,8 @@ export const Schedule = [
     away_img: trb.img,
     venue: t4q.venue,
     time: "15:00",
-    date: moment("2021-03-13").format("dddd, MMM Do"),
+    date: moment("2022-03-13").format("dddd, MMM Do"),
+    jsDate: new Date("2022-03-13"),
     result: "",
   },
 ];
