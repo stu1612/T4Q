@@ -6,11 +6,21 @@ export const NextGame = () => {
   const [date, setDate] = useState(new Date());
   const [upcoming, setUpcoming] = useState([]);
 
+  //   useEffect(() => {
+  //     Schedule.filter((fixture) => fixture.jsDate > date).map(
+  //       (filteredFixtures) => setUpcoming([filteredFixtures])
+  //     );
+  //   }, [date]);
+
   useEffect(() => {
-    Schedule.filter((fixture) => fixture.jsDate > date).map(
-      (filteredFixtures) => console.log(filteredFixtures[0])
+    setUpcoming(
+      Schedule.filter((fixture) => fixture.jsDate > date).map(
+        (filteredFixtures) => filteredFixtures
+      )
     );
   }, [date]);
+
+  console.log(upcoming[0]);
 
   return <h3>Hello</h3>;
 };
