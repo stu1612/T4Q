@@ -16,6 +16,7 @@ import {
 import { Logo } from "../Logo/Logo";
 import { HamburgerMenu } from "../Hamburger/Hamburger";
 import { SideBarNavigation } from "../MobileNavigation";
+import { NextGame } from "../Next_Game";
 
 export const Navbar = () => {
   const { themeToggler } = useContext(ThemeContext);
@@ -67,6 +68,7 @@ export const Navbar = () => {
             <SideBarNavigation open={open} isOpen={isOpen} />
           )}
           <Toggler>
+            <NextGame />
             <ThemeToggler themeToggler={themeToggler} />
           </Toggler>
         </NavContainer>

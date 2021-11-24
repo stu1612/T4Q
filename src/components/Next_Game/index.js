@@ -15,12 +15,13 @@ export const NextGame = () => {
 
   return (
     <Container>
-      <Text>Nästa Match :</Text>
+      <Text>Nästa Match </Text>
+      <Vs>vs</Vs>
       <Row>
-        <Text>{home}</Text>
-        <Vs>vs</Vs>
-        <Text>{away}</Text>
+        {home === "Team4Q" ? <Text>{away}</Text> : null}
+        {away === "Team4Q" ? <Text>{home}</Text> : null}
       </Row>
+      <Vs>|</Vs>
       <Text>{date}</Text>
     </Container>
   );
@@ -29,11 +30,15 @@ export const NextGame = () => {
 const Container = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   align-items: center;
-  background: #171717;
   width: 100%;
   height: 8vh;
+  padding: 1rem;
+
+  @media (max-width: 600px) {
+    display: none;
+  }
 `;
 
 const Row = styled.div`
@@ -43,13 +48,13 @@ const Row = styled.div`
 
 const Text = styled.h3`
   font-family: "Sora", sans-serif;
-  font-size: clamp(0.8rem, 1vw, 1.6rem);
+  font-size: clamp(0.6rem, 1vw, 1.6rem);
   color: #fafafa;
   font-weight: 100;
-  text-transform: capitalize;
+  text-transform: uppercase;
 `;
 
 const Vs = styled(Text)`
-  margin: 0 1rem;
+  margin: 0 0.5rem;
   text-transform: uppercase;
 `;
