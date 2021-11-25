@@ -10,6 +10,9 @@ export const lightTheme = {
   borderSharp: "#000",
   border: "#d3d5d7",
   borderLine: "#171717",
+  // cards: "rgba(23, 23, 23, 0.4)",
+  cards: "rgba(211, 213, 215, 0.6)",
+  svg: "#171717",
 };
 
 export const darkTheme = {
@@ -24,6 +27,8 @@ export const darkTheme = {
   bordersharp: "#fff",
   border: '#fafafa"',
   borderLine: "#c70101",
+  cards: "rgba(199, 1, 1, 0.6)",
+  svg: "#c70101",
 };
 
 // button: "#c5718d",
