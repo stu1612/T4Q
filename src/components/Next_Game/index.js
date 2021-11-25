@@ -50,7 +50,7 @@ const Text = styled.h3`
   font-family: "Sora", sans-serif;
   font-size: clamp(0.6rem, 1vw, 1.6rem);
   color: #fafafa;
-  font-weight: 100;
+  font-weight: 600;
   text-transform: uppercase;
 `;
 
