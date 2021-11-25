@@ -9,4 +9,12 @@ export const ThemeToggler = (props) => {
 
 const Icon = styled(FaBasketballBall)`
   color: ${({ theme }) => theme.text};
+  cursor: pointer;
+  font-size: 20px;
+  transition: all 0.5s ease-out;
+
+  &:hover {
+    transform: scale(1.2) rotate(360deg);
+    /* transition: all 0.5s ease-out; */
+  }
 `;
