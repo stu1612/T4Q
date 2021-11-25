@@ -9,7 +9,10 @@ export const Card = () => {
       <ImageWrapper>
         <CardImage src={image} />
         <Circle>
-          <Text>Hello</Text>
+          <TextWrapper>
+            <Title>Herr</Title>
+            <Text>Läs Mer</Text>
+          </TextWrapper>
         </Circle>
       </ImageWrapper>
     </Container>
@@ -32,14 +35,32 @@ const Circle = styled.div`
   pointer-events: none;
 `;
 
-const Text = styled.p`
-  color: white;
+const TextWrapper = styled.div`
   position: absolute;
-  top: 20%;
+  top: 25%;
   left: 50%;
   opacity: 0;
   transition: all 1s ease-out;
   transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const Title = styled.h3`
+  font-family: "Ubuntu", sans-serif;
+  font-size: clamp(0.5rem, 1vw, 1.3rem);
+  color: #fafafa;
+  font-weight: 200;
+  text-transform: uppercase;
+`;
+const Text = styled.p`
+  font-family: "Ubuntu", sans-serif;
+  font-size: clamp(0.3rem, 0.3vw, 0.8rem);
+  color: #fafafa;
+  font-weight: 100;
+  text-transform: lowercase;
 `;
 
 const CardImage = styled.div`
@@ -76,7 +97,7 @@ const ImageWrapper = styled.div`
       transform: scale(3);
       transform-origin: right;
     }
-    ${Text} {
+    ${TextWrapper} {
       opacity: 1;
     }
   }

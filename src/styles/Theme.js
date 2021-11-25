@@ -11,8 +11,10 @@ export const lightTheme = {
   border: "#d3d5d7",
   borderLine: "#171717",
   // cards: "rgba(23, 23, 23, 0.4)",
-  cards: "rgba(211, 213, 215, 0.6)",
-  svg: "#171717",
+  // cards: "rgba(211, 213, 215, 0.6)",
+  // svg: "#171717",
+  cards: "rgba(199, 1, 1, 0.2)",
+  svg: "#c70101",
 };
 
 export const darkTheme = {
@@ -27,8 +29,13 @@ export const darkTheme = {
   bordersharp: "#fff",
   border: '#fafafa"',
   borderLine: "#c70101",
-  cards: "rgba(199, 1, 1, 0.6)",
-  svg: "#c70101",
+  // cards: "rgba(199, 1, 1, 0.6)",
+  // svg: "#c70101",
+  // cards: "rgba(211, 213, 215, 0.6)",
+  cards: "rgba(0, 255, 245, 0.2)",
+  // svg: "#171717",
+  // svg: "#00fff5",
+  svg: "#00adb5",
 };
 
 // button: "#c5718d",
