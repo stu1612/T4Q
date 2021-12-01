@@ -2,15 +2,12 @@
 import React from "react";
 import { Layout } from "../components/Page_Layout/Layout";
 import { Carousel } from "../components/Carousel/index";
-import { CardsTop } from "../components/Cards_Top";
-import { Card } from "../components/Card_UI";
+import { Cards } from "../components/Cards_Container";
 
 export const Hem = () => {
   return (
     <Layout>
-      <CardsTop>
-        <Card />
-      </CardsTop>
+      <Cards />
 
       <h1>THis is the main content</h1>
       <h1>THis is the main content</h1>

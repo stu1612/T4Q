@@ -1,17 +1,17 @@
+/* eslint-disable no-undef */
 import React from "react";
 import styled from "styled-components";
 
-import image from "../../assets/images/cards/mens.png";
-
-export const Card = () => {
+export const Card = ({ image, alt, title, text }) => {
+  console.log(image);
   return (
     <Container>
       <ImageWrapper>
-        <CardImage src={image} />
+        <CardImage src={image} alt={alt} />
         <Circle>
           <TextWrapper>
-            <Title>Herr</Title>
-            <Text>Läs Mer</Text>
+            <Title>{title}</Title>
+            <Text>{text}</Text>
           </TextWrapper>
         </Circle>
       </ImageWrapper>
@@ -63,13 +63,14 @@ const Text = styled.p`
   text-transform: lowercase;
 `;
 
-const CardImage = styled.div`
-  background-image: url(${image});
-  background-size: contain;
+const CardImage = styled.img`
+  object-fit: contain;
+  /* background-size: contain;
   background-origin: border-box;
   background-position-x: 50%;
   background-position-y: -2rem;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
+  object-position: 0 2rem;
   width: 100%;
   height: 100%;
   transition: transform 1s ease-out;
@@ -102,3 +103,6 @@ const ImageWrapper = styled.div`
     }
   }
 `;
+
+/* background-image: url(${image}); */
+/* background-image: url(${(props) => props.image }); */
