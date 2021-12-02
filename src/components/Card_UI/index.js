@@ -2,28 +2,32 @@
 import React from "react";
 import styled from "styled-components";
 
-export const Card = ({ image, alt, title, text }) => {
+export const Card = ({ backgroundImage, image, alt, title, text }) => {
   console.log(image);
   return (
     <Container>
-      <ImageWrapper>
-        <CardImage src={image} alt={alt} />
-        <Circle>
+      <CardWrapper>
+        <BackgroundImage src={backgroundImage} alt={alt} />
+        {/* <Circle>
           <TextWrapper>
             <Title>{title}</Title>
             <Text>{text}</Text>
           </TextWrapper>
-        </Circle>
-      </ImageWrapper>
+        </Circle> */}
+      </CardWrapper>
     </Container>
   );
 };
 
-const Container = styled.div``;
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 const Circle = styled.div`
   clip-path: circle(50% at 50% 50%);
-  background-color: ${({ theme }) => theme.svg};
+  background-color: ${({ theme }) => theme.svgBg};
   position: absolute;
   height: 100px;
   width: 100px;
@@ -48,48 +52,49 @@ const TextWrapper = styled.div`
   align-items: center;
 `;
 
-const Title = styled.h3`
-  font-family: "Ubuntu", sans-serif;
-  font-size: clamp(0.5rem, 1vw, 1.3rem);
-  color: #fafafa;
-  font-weight: 200;
-  text-transform: uppercase;
-`;
-const Text = styled.p`
-  font-family: "Ubuntu", sans-serif;
-  font-size: clamp(0.3rem, 0.3vw, 0.8rem);
-  color: #fafafa;
-  font-weight: 100;
-  text-transform: lowercase;
-`;
+// const Title = styled.h3`
+//   font-family: "Ubuntu", sans-serif;
+//   font-size: clamp(0.5rem, 1vw, 1.3rem);
+//   color: #fafafa;
+//   font-weight: 200;
+//   text-transform: uppercase;
+// `;
+// const Text = styled.p`
+//   font-family: "Ubuntu", sans-serif;
+//   font-size: clamp(0.3rem, 0.3vw, 0.8rem);
+//   color: #fafafa;
+//   font-weight: 100;
+//   text-transform: lowercase;
+// `;
 
 const CardImage = styled.img`
   object-fit: contain;
-  /* background-size: contain;
-  background-origin: border-box;
-  background-position-x: 50%;
-  background-position-y: -2rem;
-  background-repeat: no-repeat; */
-  object-position: 0 2rem;
+  /* object-position: 0 2rem; */
   width: 100%;
   height: 100%;
-  transition: transform 1s ease-out;
-  background-color: ${({ theme }) => theme.cards};
+  background: #000;
+  transition: transform 0.5s ease-out;
   background-blend-mode: color-burn;
-  transform: scale(1.4);
   filter: saturate(0.5);
   cursor: pointer;
   &:hover {
-    transform: scale(1.6);
+    transform: scale(1.3);
   }
 `;
 
-const ImageWrapper = styled.div`
-  width: 250px;
+const BackgroundImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: rgb(0, 0, 0);
+  background-blend-mode: color-burn;
+`;
+
+const CardWrapper = styled.div`
+  width: 100%;
   height: 50vh;
   overflow: hidden;
   border-radius: 8px;
-  display: inline-block;
   position: relative;
   transition: transform 1s ease-out;
 

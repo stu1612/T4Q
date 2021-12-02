@@ -17,12 +17,12 @@ export const Opening = () => {
   };
 
   return (
-    <StyledWrapper>
+    <Container>
       <Video />
-      <StyledOverlay>
-        <StyledTitle variants={titleAnim} initial="hidden" animate="show">
+      <OverlayBG>
+        <Title variants={titleAnim} initial="hidden" animate="show">
           Team Fourth Quarter
-        </StyledTitle>
+        </Title>
         <Button
           title="Välkommen"
           onClick={handleClick}
@@ -30,12 +30,12 @@ export const Opening = () => {
           initial="hidden"
           animate="show"
         />
-      </StyledOverlay>
-    </StyledWrapper>
+      </OverlayBG>
+    </Container>
   );
 };
 
-const StyledWrapper = styled.div`
+const Container = styled.div`
   width: 100%;
   background: #fff;
   height: 100vh;
@@ -45,26 +45,26 @@ const StyledWrapper = styled.div`
   z-index: 20;
 `;
 
-const StyledOverlay = styled.div`
+const OverlayBG = styled.div`
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.4);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  filter: opacity(0.8);
 `;
 
-const StyledTitle = styled(motion.h1)`
-  font-family: "Sora";
+const Title = styled(motion.h1)`
+  font-family: "Play", sans-serif;
   text-transform: uppercase;
-  font-weight: 100;
-  font-size: clamp(4rem, 1vw + 1rem, 1rem);
+  font-size: clamp(2rem, 6vw, 7rem);
   text-align: center;
-  color: #fffafa;
+  color: #f8f8f8;
 
   @media (max-width: 1024px) {
     margin-bottom: 2rem;

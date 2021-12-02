@@ -5,12 +5,25 @@ export const GlobalStyles = createGlobalStyle`
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  list-style: none;
+}
+
+html {
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: ${({ theme }) => theme.navBg}
+  }
+  &::-webkit-scrollbar-track {
+    background-color: #fff
+
+  }
 }
 
 body {
-  font-family: "IBM Plex Sans", sans-serif;
-  transition: background 0.5s linear;
+  font-family: "Poppins", sans-serif;
+  background: ${({ theme }) => theme.primaryBg};
+  transition: background 0.5s ease-out;
   overflow-anchor: none;
 }
 

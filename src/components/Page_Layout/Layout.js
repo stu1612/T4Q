@@ -14,7 +14,6 @@ export const Layout = ({ children }) => {
 };
 
 const Container = styled.div`
-  background: ${({ theme }) => theme.shadedBackground};
   display: flex;
   flex-direction: column;
   justify-content: center;

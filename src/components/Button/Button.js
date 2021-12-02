@@ -12,6 +12,7 @@ export const Button = ({ title, bgColor, ...buttonProps }) => {
 
 const Btn = styled(motion.button)`
   position: relative;
+  font-family: "Poppins", sans-serif;
   border: 1px solid;
   border-radius: 25px;
   border-color: #d3d5d7;

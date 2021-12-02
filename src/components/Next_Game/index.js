@@ -46,15 +46,12 @@ const Row = styled.div`
   flex-direction: row;
 `;
 
-const Text = styled.h3`
-  font-family: "Sora", sans-serif;
+const Text = styled.h4`
   font-size: clamp(0.6rem, 1vw, 1.6rem);
-  color: #fafafa;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
 `;
 
 const Vs = styled(Text)`
   margin: 0 0.5rem;
-  text-transform: uppercase;
 `;

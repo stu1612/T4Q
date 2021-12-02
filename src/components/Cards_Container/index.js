@@ -9,6 +9,7 @@ export const Cards = () => {
       {TeamCards.map((card) => (
         <Card
           image={card.img}
+          backgroundImage={card.backgroundImg}
           alt={card.alt}
           title={card.title}
           text={card.text}
@@ -18,12 +19,12 @@ export const Cards = () => {
   );
 };
 
-const Container = styled.section`
-  width: 100%;
-  height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* padding: 3rem; */
-  /* background: yellow; */
+const Container = styled.div`
+  width: 80%;
+  min-height: 80vh;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-column-gap: 2rem;
+  grid-row-gap: 5rem;
 `;

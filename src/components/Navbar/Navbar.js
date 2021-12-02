@@ -8,7 +8,7 @@ import { DesktopNavigation } from "../DesktopNavigation/index";
 
 import {
   Nav,
-  NavHeader,
+  LogoContainer,
   NavContainer,
   ToggleNavigation,
   Toggler,
@@ -55,9 +55,9 @@ export const Navbar = () => {
   return (
     <Router>
       <Nav variants={scrollAnim} animate={hidden ? "hidden" : "visible"}>
-        <NavHeader>
+        <LogoContainer>
           <Logo />
-        </NavHeader>
+        </LogoContainer>
         <NavContainer>
           <ToggleNavigation>
             <HamburgerMenu open={open} isOpen={isOpen} />

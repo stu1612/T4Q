@@ -1,22 +1,23 @@
-import men from "../assets/images/cards/mens.png";
-import women from "../assets/images/cards/new_fem.png";
-import junior from "../assets/images/cards/kids.png";
+import bg1 from "../assets/images/cards/card_bg1.jpeg";
+import bg2 from "../assets/images/cards/card_bg2.jpeg";
+import bg3 from "../assets/images/cards/card_bg3.jpeg";
+import Img from "../assets/images/cards/CARD_1.png";
 
 export const TeamCards = [
   {
-    img: men,
+    backgroundImg: Img,
     alt: "Herr spelar",
     title: "Herr",
     text: "This is some text",
   },
   {
-    img: women,
+    backgroundImg: bg2,
     alt: "Dam spelar",
     title: "Dam",
     text: "This is some text",
   },
   {
-    img: junior,
+    backgroundImg: bg3,
     alt: "junior spelar",
     title: "Junior",
     text: "This is some text",
