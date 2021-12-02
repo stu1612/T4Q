@@ -8,8 +8,7 @@ export const Cards = () => {
     <Container>
       {TeamCards.map((card) => (
         <Card
-          image={card.img}
-          backgroundImage={card.backgroundImg}
+          image={card.image}
           alt={card.alt}
           title={card.title}
           text={card.text}

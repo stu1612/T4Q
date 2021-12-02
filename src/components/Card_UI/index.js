@@ -2,18 +2,20 @@
 import React from "react";
 import styled from "styled-components";
 
-export const Card = ({ backgroundImage, image, alt, title, text }) => {
+export const Card = ({ image, alt, title, text }) => {
   console.log(image);
   return (
     <Container>
       <CardWrapper>
-        <BackgroundImage src={backgroundImage} alt={alt} />
-        {/* <Circle>
+        <BackgroundImage src={image} alt={alt} />
+        <Overlay>
+          <h3>{title}</h3>
+        </Overlay>
+        <Circle>
           <TextWrapper>
-            <Title>{title}</Title>
-            <Text>{text}</Text>
+            <p>{text}</p>
           </TextWrapper>
-        </Circle> */}
+        </Circle>
       </CardWrapper>
     </Container>
   );
@@ -23,6 +25,24 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+`;
+
+const Overlay = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.6) 90%);
+  h3 {
+    position: absolute;
+    bottom: 5%;
+    color: #fff;
+    left: 50%;
+    transform: translate(-50%, -5%);
+    opacity: 1;
+    transition: opacity 0.7s ease-out;
+  }
 `;
 
 const Circle = styled.div`
@@ -50,35 +70,9 @@ const TextWrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-`;
-
-// const Title = styled.h3`
-//   font-family: "Ubuntu", sans-serif;
-//   font-size: clamp(0.5rem, 1vw, 1.3rem);
-//   color: #fafafa;
-//   font-weight: 200;
-//   text-transform: uppercase;
-// `;
-// const Text = styled.p`
-//   font-family: "Ubuntu", sans-serif;
-//   font-size: clamp(0.3rem, 0.3vw, 0.8rem);
-//   color: #fafafa;
-//   font-weight: 100;
-//   text-transform: lowercase;
-// `;
-
-const CardImage = styled.img`
-  object-fit: contain;
-  /* object-position: 0 2rem; */
-  width: 100%;
-  height: 100%;
-  background: #000;
-  transition: transform 0.5s ease-out;
-  background-blend-mode: color-burn;
-  filter: saturate(0.5);
-  cursor: pointer;
-  &:hover {
-    transform: scale(1.3);
+  p {
+    font-size: 8px;
+    color: #fff;
   }
 `;
 
@@ -86,28 +80,34 @@ const BackgroundImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  background-color: rgb(0, 0, 0);
-  background-blend-mode: color-burn;
+  transition: transform 1s ease-out;
+  transform: scale(1);
 `;
 
 const CardWrapper = styled.div`
   width: 100%;
   height: 50vh;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 8%;
   position: relative;
-  transition: transform 1s ease-out;
+  transition: transform 0.5s ease-out;
+  cursor: pointer;
 
   &:hover {
     ${Circle} {
-      transform: scale(3);
+      transform: scale(4);
       transform-origin: right;
+    }
+    ${BackgroundImage} {
+      transform: scale(1.2);
     }
     ${TextWrapper} {
       opacity: 1;
     }
+    ${Overlay} {
+      h3 {
+        opacity: 0;
+      }
+    }
   }
 `;
-
-/* background-image: url(${image}); */
-/* background-image: url(${(props) => props.image }); */

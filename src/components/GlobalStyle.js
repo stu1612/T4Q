@@ -27,6 +27,13 @@ body {
   overflow-anchor: none;
 }
 
+h3 {
+  font-family: "Play", sans-serif;
+  font-size: clamp(2rem, 2vw, 4rem);
+
+
+}
+
 
 
 /* h1 {
