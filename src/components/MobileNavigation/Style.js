@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const MobileContainer = styled.div`
   /* background: ${({ theme }) => theme.navBackground}; */
-  background: forestgreen;
+  background: #222831;
   position: fixed;
   top: 0;
   right: 0;

@@ -17,9 +17,8 @@ export const SideBarNavigation = ({ open, isOpen }) => {
     isOpen(!open);
   };
   return (
-    <>
-      <MobileContainer>
-        {/* <MobileNavigation>
+    <MobileContainer>
+      {/* <MobileNavigation>
           <MobileContactLink>
             <Button title="kontakt" onClick={() => console.log("helloooo")} />
           </MobileContactLink>
@@ -42,8 +41,7 @@ export const SideBarNavigation = ({ open, isOpen }) => {
             </Wrapper>
           </MobileNavigationLinks>
         </MobileNavigation> */}
-      </MobileContainer>
-    </>
+    </MobileContainer>
   );
 };
 
