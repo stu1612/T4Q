@@ -5,6 +5,7 @@ import { GlobalStyles } from "./components/GlobalStyle";
 import { lightTheme, darkTheme } from "./styles/Theme";
 import { Navbar } from "./components/Navbar/Navbar";
 import { AppLoading } from "./components/OnPage_Loading/index";
+import { TopNavbar } from "./components/Navbar/Top_Navbar";
 
 function App() {
   const { theme, themeToggler } = useContext(ThemeContext);
@@ -32,6 +33,7 @@ function App() {
   return (
     <ThemeProvider theme={selectedTheme}>
       <GlobalStyles />
+      <TopNavbar />
       <Navbar />
     </ThemeProvider>
   );

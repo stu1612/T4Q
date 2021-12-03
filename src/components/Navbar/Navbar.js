@@ -55,9 +55,6 @@ export const Navbar = () => {
   return (
     <Router>
       <Nav variants={scrollAnim} animate={hidden ? "hidden" : "visible"}>
-        <LogoContainer>
-          <Logo />
-        </LogoContainer>
         <NavContainer>
           <ToggleNavigation>
             <HamburgerMenu open={open} isOpen={isOpen} />
