@@ -39,6 +39,7 @@ const Container = styled.div`
   background: #f8f8f8;
   display: flex;
   justify-content: center;
+  align-items: center;
 `;
 
 const Wrapper = styled.div`

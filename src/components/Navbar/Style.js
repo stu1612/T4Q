@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 // DESKTOP STYLES
 export const Nav = styled(motion.nav)`
-  height: 10vh;
+  height: 7vh;
   /* background: ${({ theme }) => theme.navBg}; */
   background: #222831;
   color: #f8f8f8;
