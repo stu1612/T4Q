@@ -4,47 +4,32 @@ import { motion } from "framer-motion";
 
 // DESKTOP STYLES
 export const Nav = styled(motion.nav)`
+  height: 10vh;
   background: ${({ theme }) => theme.navBg};
   color: #f8f8f8;
   display: flex;
+  justify-content: center;
   align-items: center;
   position: sticky;
   width: 100%;
   overflow: hidden;
   top: 0;
   z-index: 10;
-  padding: 10px;
-`;
-
-export const LogoContainer = styled.div`
-  height: 73px;
-  @media (max-width: 1024px) {
-    height: 68px;
-  }
-  @media (max-width: 768px) {
-    height: 60px;
-  }
 `;
 
 export const NavContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 20;
-  width: 100%;
-  height: 73px;
-  @media (max-width: 1024px) {
-    height: 68px;
-  }
-  @media (max-width: 768px) {
-    height: 60px;
-  }
+  z-index: 999;
+  width: 80%;
+  height: 100%;
 `;
 
 export const ToggleNavigation = styled.div`
-  @media (min-width: 1025px) {
+  /* @media (min-width: 1025px) {
     display: none;
-  }
+  } */
 `;
 
 export const DesktopNavigationLinks = styled.ul`

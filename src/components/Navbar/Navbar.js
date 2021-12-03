@@ -6,14 +6,7 @@ import { useViewportScroll } from "framer-motion";
 import { SwitchRoutes } from "../../routes/Switch";
 import { DesktopNavigation } from "../DesktopNavigation/index";
 
-import {
-  Nav,
-  LogoContainer,
-  NavContainer,
-  ToggleNavigation,
-  Toggler,
-} from "./Style";
-import { Logo } from "../Logo/Logo";
+import { Nav, NavContainer, ToggleNavigation, Toggler } from "./Style";
 import { HamburgerMenu } from "../Hamburger/Hamburger";
 import { SideBarNavigation } from "../MobileNavigation";
 import { NextGame } from "../Next_Game";
@@ -24,6 +17,7 @@ export const Navbar = () => {
 
   const { scrollY } = useViewportScroll();
   const [hidden, setHidden] = useState(false);
+  console.log(scrollY);
 
   useEffect(() => {
     return scrollY.onChange(() => updateScrollPos());
@@ -41,7 +35,7 @@ export const Navbar = () => {
 
   // Remove hide scroll bar functionality when screensize is less than 1024px
   let scrollAnim = {};
-  const isMobile = window.innerWidth < 1024;
+  const isMobile = window.innerWidth < 1024 || open;
   if (!isMobile) {
     scrollAnim = {
       hidden: { opacity: 0 },

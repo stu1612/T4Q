@@ -4,11 +4,11 @@ import { ThemeContext } from "./contexts/ThemeContext";
 import { GlobalStyles } from "./components/GlobalStyle";
 import { lightTheme, darkTheme } from "./styles/Theme";
 import { Navbar } from "./components/Navbar/Navbar";
-import { AppLoading } from "./components/OnPage_Loading/index";
+// import { AppLoading } from "./components/OnPage_Loading/index";
 import { TopNavbar } from "./components/Navbar/Top_Navbar";
 
 function App() {
-  const { theme, themeToggler } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
   const selectedTheme = theme === "light" ? lightTheme : darkTheme;
   const [isLoading, setIsLoading] = useState(true);
 

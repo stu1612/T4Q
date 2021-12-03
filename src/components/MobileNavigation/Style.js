@@ -2,15 +2,16 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const MobileContainer = styled.div`
-  background: ${({ theme }) => theme.navBackground};
+  /* background: ${({ theme }) => theme.navBackground}; */
+  background: forestgreen;
   position: fixed;
-  top: 73px;
+  top: 0;
   right: 0;
   left: 0;
   bottom: 0;
   height: 100vh;
   width: 100vw;
-  overflow: hidden;
+  overflow-y: hidden;
   display: flex;
   justify-content: center;
   z-index: -10;
