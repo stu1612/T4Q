@@ -6,7 +6,8 @@ import { motion } from "framer-motion";
 export const Nav = styled(motion.nav)`
   height: 7vh;
   /* background: ${({ theme }) => theme.navBg}; */
-  background: #222831;
+  /* background: #222831; */
+  background: #181818;
   color: #f8f8f8;
   display: flex;
   justify-content: center;

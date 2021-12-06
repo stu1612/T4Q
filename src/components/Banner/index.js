@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import img from "../../assets/images/Banner/kids_long.jpg";
+import { BreakerContainer } from "../Breaker_Container";
 
 export const Banner = () => {
   return (
@@ -8,9 +9,17 @@ export const Banner = () => {
       <Overlay />
       <Image>
         <TextBox>
-          <h1>Hello</h1>
+          <TopTitle>marcus</TopTitle>
+          <BottomTitle>rashford</BottomTitle>
+          <Divider />
+          <p>
+            "As a local lad from Manchester, playing for Manchester United is a
+            dream come true. I always want to play and contribute as best as i
+            can for the team and the fans"
+          </p>
         </TextBox>
       </Image>
+      <BreakerContainer />
     </Container>
   );
 };
@@ -46,5 +55,25 @@ const TextBox = styled.div`
   transform: translate(-50%, -50%);
   height: 50%;
   width: 30%;
-  background: white;
+  background: transparent;
+
+  p {
+    color: #fff;
+  }
+`;
+
+const TopTitle = styled.h2`
+  color: #c70101;
+  text-transform: uppercase;
+`;
+const BottomTitle = styled.h2`
+  color: #fff;
+  text-transform: uppercase;
+  font-size: clamp(2.8rem, 2vw, 4.8rem);
+`;
+const Divider = styled.div`
+  width: 100%;
+  background-color: #fff;
+  height: 1.5px;
+  margin: 1.5rem 0;
 `;

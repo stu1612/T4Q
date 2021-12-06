@@ -30,7 +30,15 @@ body {
 h3 {
   font-family: "Play", sans-serif;
   font-size: clamp(2rem, 2vw, 4rem);
-
+  line-height:1;
+}
+h2 {
+  line-height:1;
+  font-size: clamp(1.6rem, 1.8vw, 3.8rem);
+}
+p {
+  font-size: clamp(0.8rem, 1.2vw, 2rem);
+  line-height:1.5;
 
 }
 
