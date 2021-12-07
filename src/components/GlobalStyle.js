@@ -39,6 +39,10 @@ h2 {
 p {
   font-size: clamp(0.8rem, 1.2vw, 2rem);
   line-height:1.5;
+}
+small {
+  font-size: clamp(0.4rem, 1vw, 0.8rem);
+  color:#949494;
 
 }
 

@@ -27,7 +27,7 @@ export const Tabs = () => {
               <Wrapper>
                 <div>
                   <h3>{item.text}</h3>
-                  <p>Read more -></p>
+                  <p>Read more </p>
                 </div>
               </Wrapper>
             </>
@@ -39,19 +39,28 @@ export const Tabs = () => {
           className={activeTab === "Tab 1" ? "active" : ""}
           onClick={handleTab1}
         >
-          Tab 1
+          <div>
+            <p>Greenwod will take chance when it comes</p>
+            <small>06/12/21 11:40</small>
+          </div>
         </li>
         <li
           className={activeTab === "Tab 2" ? "active" : ""}
           onClick={handleTab2}
         >
-          Tab 2
+          <div>
+            <p>Greenwod will take chance when it comes</p>
+            <small>06/12/21 11:40</small>
+          </div>
         </li>
         <li
           className={activeTab === "Tab 3" ? "active" : ""}
           onClick={handleTab3}
         >
-          Tab 3
+          <div>
+            <p>Greenwod will take chance when it comes</p>
+            <small>06/12/21 11:40</small>
+          </div>
         </li>
       </List>
     </Container>
@@ -81,14 +90,30 @@ const List = styled.ul`
     width: 30vw;
     height: 100%;
     cursor: pointer;
-    transition: 0.2s all ease-out;
+    transition: 0.4s all ease-out;
+    border-bottom: 0.5px solid #ececec;
 
     &:hover {
-      background: #222831;
+      background: #d9d9d9;
+      border-bottom: 0.5px solid transparent;
     }
 
     &.active {
       background: #c70101;
+      border-bottom: 0.5px solid transparent;
+
+      p {
+        color: #fafafa;
+      }
+    }
+
+    div {
+      height: 100%;
+      width: 67%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      flex-direction: column;
     }
   }
 `;
@@ -110,10 +135,11 @@ const Image = styled.div`
 
 const Wrapper = styled.div`
   position: absolute;
-  height: auto;
+  pointer-events: none;
+  height: 5rem;
   bottom: 20%;
-  left: 50%;
-  width: 79%;
+  left: 39%;
+  width: 57%;
   transform: translate(-50%, 0%);
   div {
     background: rgba(0, 0, 0, 0.7);
@@ -121,16 +147,24 @@ const Wrapper = styled.div`
     width: fit-content;
     padding: 1rem 4rem 1rem 1rem;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+
     &::after {
       content: "";
+      height: 5rem;
+      background: #c70101;
       width: 2px;
-      background: yellow;
-      width: 100px;
       position: absolute;
+      bottom: 0;
+      left: 0;
     }
   }
   h3 {
     color: #fafafa;
+    padding: 0.2rem 0;
   }
   p {
     color: #c70101;
