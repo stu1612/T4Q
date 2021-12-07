@@ -1,74 +1,74 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import img from "../../assets/images/Banner/kids_long.jpg";
-import img2 from "../../assets/images/cards/KIDS_1.png";
-import img3 from "../../assets/images/cards/IMG_1.png";
+import { BottomBreaker } from "../Breaker_Container/Bottom_Breaker";
+import { data } from "../../Model/Tabs";
+import { Tab } from "../Tab";
 
 export const Tabs = () => {
   const [activeTab, setActiveTab] = useState("Tab 1");
 
-  const handleTab1 = (e) => setActiveTab("Tab 1");
-  const handleTab2 = (e) => setActiveTab("Tab 2");
-  const handleTab3 = (e) => setActiveTab("Tab 3");
+  const handleTab1 = () => setActiveTab("Tab 1");
+  const handleTab2 = () => setActiveTab("Tab 2");
+  const handleTab3 = () => setActiveTab("Tab 3");
 
-  const data = [
-    { tab: "Tab 1", text: "I am content tab 1", img: img },
-    { tab: "Tab 2", text: "I am content tab 2", img: img2 },
-    { tab: "Tab 3", text: "I am content tab 3", img: img3 },
+  const listData = [
+    {
+      no: 1,
+      para: "Greenwod will take chance when it comes",
+      small: "06/12/21 11:40",
+      handleClick: handleTab1,
+    },
+    {
+      no: 2,
+      para: "Greenwod will take chance when it comes",
+      small: "06/12/21 11:40",
+      handleClick: handleTab2,
+    },
+    {
+      no: 3,
+      para: "Greenwod will take chance when it comes",
+      small: "06/12/21 11:40",
+      handleClick: handleTab3,
+    },
   ];
-  return (
-    <Container>
-      <Content>
-        {data
-          .filter((filteredItem) => filteredItem.tab === activeTab)
-          .map((item) => (
-            <>
-              <Image img={item.img} />
-              <Wrapper>
-                <div>
-                  <h3>{item.text}</h3>
-                  <p>Read more </p>
-                </div>
-              </Wrapper>
-            </>
-          ))}
-      </Content>
 
-      <List>
-        <li
-          className={activeTab === "Tab 1" ? "active" : ""}
-          onClick={handleTab1}
-        >
-          <div>
-            <p>Greenwod will take chance when it comes</p>
-            <small>06/12/21 11:40</small>
-          </div>
-        </li>
-        <li
-          className={activeTab === "Tab 2" ? "active" : ""}
-          onClick={handleTab2}
-        >
-          <div>
-            <p>Greenwod will take chance when it comes</p>
-            <small>06/12/21 11:40</small>
-          </div>
-        </li>
-        <li
-          className={activeTab === "Tab 3" ? "active" : ""}
-          onClick={handleTab3}
-        >
-          <div>
-            <p>Greenwod will take chance when it comes</p>
-            <small>06/12/21 11:40</small>
-          </div>
-        </li>
-      </List>
-    </Container>
+  return (
+    <>
+      <Container>
+        <Content>
+          {data
+            .filter((filteredItem) => filteredItem.tab === activeTab)
+            .map((item) => (
+              <>
+                <Image img={item.img} />
+                <Tab item={item} />
+              </>
+            ))}
+        </Content>
+
+        <List>
+          {listData.map((list) => (
+            <li
+              className={activeTab === `Tab ${list.no}` ? "active" : ""}
+              onClick={list.handleClick}
+              key={list.no}
+            >
+              <div>
+                <p>{list.para}</p>
+                <small>{list.small}</small>
+              </div>
+            </li>
+          ))}
+          <div className="space" />
+        </List>
+      </Container>
+      <BottomBreaker />
+    </>
   );
 };
 
 const Container = styled.div`
-  height: 50vh;
+  height: 60vh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -81,6 +81,11 @@ const List = styled.ul`
   display: flex;
   flex-direction: column;
   height: 100%;
+
+  .space {
+    max-height: 40px;
+    height: 100%;
+  }
 
   li {
     text-decoration: none;
@@ -131,42 +136,4 @@ const Image = styled.div`
   width: 100%;
   background-color: rgba(0, 0, 0, 0.3);
   background-blend-mode: multiply;
-`;
-
-const Wrapper = styled.div`
-  position: absolute;
-  pointer-events: none;
-  height: 5rem;
-  bottom: 20%;
-  left: 39%;
-  width: 57%;
-  transform: translate(-50%, 0%);
-  div {
-    background: rgba(0, 0, 0, 0.7);
-    height: 100%;
-    width: fit-content;
-    padding: 1rem 4rem 1rem 1rem;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    cursor: pointer;
-
-    &::after {
-      content: "";
-      height: 5rem;
-      background: #c70101;
-      width: 2px;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-    }
-  }
-  h3 {
-    color: #fafafa;
-    padding: 0.2rem 0;
-  }
-  p {
-    color: #c70101;
-  }
 `;

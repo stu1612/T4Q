@@ -8,7 +8,7 @@ export const Superettan = () => {
 
 const Container = styled.div`
   background: orange;
-  height: 30vh;
+  height: 40vh;
   width: 100%;
   background: rgba(255, 205, 0, 0.4);
   background-image: url(${img});

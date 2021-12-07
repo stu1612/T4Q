@@ -28,7 +28,6 @@ body {
 }
 
 h3 {
-  font-family: "Play", sans-serif;
   font-size: clamp(2rem, 2vw, 4rem);
   line-height:1;
 }
@@ -38,10 +37,12 @@ h2 {
 }
 p {
   font-size: clamp(0.8rem, 1.2vw, 2rem);
+  font-family: 'Rubik', sans-serif;
   line-height:1.5;
 }
 small {
   font-size: clamp(0.4rem, 1vw, 0.8rem);
+  font-family: 'Rubik', sans-serif;
   color:#949494;
 
 }

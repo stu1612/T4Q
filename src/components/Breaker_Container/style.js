@@ -1,23 +1,13 @@
-import React from "react";
 import styled from "styled-components";
 
-export const BreakerContainer = () => {
-  return (
-    <Container>
-      <Breaker left="0%" top="0%" />
-      <Breaker />
-    </Container>
-  );
-};
-
-const Container = styled.div`
+export const Container = styled.div`
   height: 5rem;
   width: 100vw;
   position: relative;
   transform: translate(0, -50%);
 `;
 
-const Breaker = styled.div`
+export const Breaker = styled.div`
   height: 50%;
   width: 50vw;
   position: absolute;

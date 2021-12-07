@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import img from "../../assets/images/Banner/kids_long.jpg";
-import { BreakerContainer } from "../Breaker_Container";
+import { TopBreaker } from "../Breaker_Container/Top_Breaker";
 
 export const Banner = () => {
   return (
@@ -19,7 +19,7 @@ export const Banner = () => {
           </p>
         </TextBox>
       </Image>
-      <BreakerContainer />
+      <TopBreaker />
     </Container>
   );
 };

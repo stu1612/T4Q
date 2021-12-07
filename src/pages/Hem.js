@@ -7,34 +7,31 @@ import { Superettan } from "../components/Superettan_Banner";
 import { Tabs } from "../components/Tabs_Container";
 
 export const Hem = () => {
-  const width = window.innerWidth;
-  const height = window.innerHeight;
-  console.log("width :" + width, "height :" + height);
   return (
     <Layout>
       <Banner />
-      {/* <BreakerContainer /> */}
       <Superettan />
       <Tabs />
-      <h1>THis is the main content</h1>
-      <h1>THis is the main content</h1>
-      <h1>THis is the main content</h1>
-      <h1>THis is the main content</h1>
-      <h1>THis is the main content</h1>
-      <h1>THis is the main content</h1>
-      <h1>THis is the main content</h1>
-      <h1>THis is the main content</h1>
-      <h1>THis is the main content</h1>
-      <h1>THis is the main content</h1>
-      <h1>THis is the main content</h1>
-      <h1>THis is the main content</h1>
-      <h1>THis is the main content</h1>
-      <h1>THis is the main content</h1>
-      <h1>THis is the main content</h1>
-      <h1>THis is the main content</h1>
-      <h1>THis is the main content</h1>
-      <h1>THis is the main content</h1>
       <Carousel />
+
+      <h1>THis is the main content</h1>
+      <h1>THis is the main content</h1>
+      <h1>THis is the main content</h1>
+      <h1>THis is the main content</h1>
+      <h1>THis is the main content</h1>
+      <h1>THis is the main content</h1>
+      <h1>THis is the main content</h1>
+      <h1>THis is the main content</h1>
+      <h1>THis is the main content</h1>
+      <h1>THis is the main content</h1>
+      <h1>THis is the main content</h1>
+      <h1>THis is the main content</h1>
+      <h1>THis is the main content</h1>
+      <h1>THis is the main content</h1>
+      <h1>THis is the main content</h1>
+      <h1>THis is the main content</h1>
+      <h1>THis is the main content</h1>
+      <h1>THis is the main content</h1>
     </Layout>
   );
 };
