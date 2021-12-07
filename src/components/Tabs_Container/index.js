@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Tab1 } from "../Tabs/Tab_1";
-import { Tab2 } from "../Tabs/Tab_2";
+import img from "../../assets/images/Banner/kids_long.jpg";
+import img2 from "../../assets/images/cards/KIDS_1.png";
+import img3 from "../../assets/images/cards/IMG_1.png";
 
 export const Tabs = () => {
   const [activeTab, setActiveTab] = useState("Tab 1");
@@ -9,21 +10,27 @@ export const Tabs = () => {
   const handleTab1 = (e) => setActiveTab("Tab 1");
   const handleTab2 = (e) => setActiveTab("Tab 2");
   const handleTab3 = (e) => setActiveTab("Tab 3");
-  // const handleTab3 = () => setActiveTab("tab3");
 
   const data = [
-    { tab: "Tab 1", text: "I am content tab 1" },
-    { tab: "Tab 2", text: "I am content tab 2" },
-    { tab: "Tab 3", text: "I am content tab 3" },
+    { tab: "Tab 1", text: "I am content tab 1", img: img },
+    { tab: "Tab 2", text: "I am content tab 2", img: img2 },
+    { tab: "Tab 3", text: "I am content tab 3", img: img3 },
   ];
   return (
     <Container>
-      {/* <Content>{activeTab === "tab1" ? <Tab1 /> : <Tab2 />}</Content> */}
       <Content>
         {data
           .filter((filteredItem) => filteredItem.tab === activeTab)
           .map((item) => (
-            <p>{item.text}</p>
+            <>
+              <Image img={item.img} />
+              <Wrapper>
+                <div>
+                  <h3>{item.text}</h3>
+                  <p>Read more -></p>
+                </div>
+              </Wrapper>
+            </>
           ))}
       </Content>
 
@@ -52,12 +59,13 @@ export const Tabs = () => {
 };
 
 const Container = styled.div`
-  background: pink;
-  height: 30vh;
+  height: 50vh;
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: row;
+  position: relative;
+  border-top: 4px solid #c70101;
 `;
 
 const List = styled.ul`
@@ -72,20 +80,59 @@ const List = styled.ul`
     background: white;
     width: 30vw;
     height: 100%;
+    cursor: pointer;
+    transition: 0.2s all ease-out;
 
     &:hover {
-      background: #dddddd;
+      background: #222831;
     }
 
     &.active {
-      background: blue;
+      background: #c70101;
     }
   }
 `;
 
 const Content = styled.div`
   display: flex;
-  background: green;
   flex: 1;
   height: 100%;
+`;
+
+const Image = styled.div`
+  background-image: url(${(props) => props.img});
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-blend-mode: multiply;
+`;
+
+const Wrapper = styled.div`
+  position: absolute;
+  height: auto;
+  bottom: 20%;
+  left: 50%;
+  width: 79%;
+  transform: translate(-50%, 0%);
+  div {
+    background: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    width: fit-content;
+    padding: 1rem 4rem 1rem 1rem;
+    position: relative;
+    &::after {
+      content: "";
+      width: 2px;
+      background: yellow;
+      width: 100px;
+      position: absolute;
+    }
+  }
+  h3 {
+    color: #fafafa;
+  }
+  p {
+    color: #c70101;
+  }
 `;
