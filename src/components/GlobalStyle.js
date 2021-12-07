@@ -36,7 +36,7 @@ h2 {
   font-size: clamp(1.6rem, 1.8vw, 3.8rem);
 }
 p {
-  font-size: clamp(0.8rem, 1.2vw, 2rem);
+  font-size: clamp(0.6rem, 1.2vw, 2rem);
   font-family: 'Rubik', sans-serif;
   line-height:1.5;
 }

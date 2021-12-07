@@ -82,9 +82,20 @@ const List = styled.ul`
   flex-direction: column;
   height: 100%;
 
+  @media (max-width: 768px) {
+    flex-direction: row;
+    height: 20%;
+    position: absolute;
+    top: 0;
+  }
+
   .space {
     max-height: 40px;
     height: 100%;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 
   li {
@@ -97,6 +108,11 @@ const List = styled.ul`
     cursor: pointer;
     transition: 0.4s all ease-out;
     border-bottom: 0.5px solid #ececec;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      padding: 0.5rem;
+    }
 
     &:hover {
       background: #d9d9d9;
@@ -119,6 +135,10 @@ const List = styled.ul`
       justify-content: space-evenly;
       align-items: flex-start;
       flex-direction: column;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
     }
   }
 `;
