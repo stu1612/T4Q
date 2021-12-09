@@ -23,8 +23,10 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   background: ${({ theme }) => theme.primaryBg};
+  /* background: #222831; */
   transition: background 0.5s ease-out;
   overflow-anchor: none;
+  overflow-x:hidden;
 }
 
 h3 {

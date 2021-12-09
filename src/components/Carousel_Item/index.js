@@ -14,27 +14,23 @@ export const CarouselItem = ({
   return (
     <Container>
       <TextWrapper>
-        <Text>{date}</Text>
-        <Text>{venue}</Text>
+        <p>{date}</p>
+        <p>{venue}</p>
       </TextWrapper>
       <Row>
         <ImageContainer>
-          <TeamBadge src={homeImg} alt="team logo" />
+          <img src={homeImg} alt="team logo" />
         </ImageContainer>
 
-        {!result ? (
-          <FixtureInfo>{time}</FixtureInfo>
-        ) : (
-          <ResultInfo>{result}</ResultInfo>
-        )}
+        {!result ? <Fixture>{time}</Fixture> : <Result>{result}</Result>}
         <ImageContainer>
-          <TeamBadge src={awayImg} alt="team logo" />
+          <img src={awayImg} alt="team logo" />
         </ImageContainer>
       </Row>
       <TextRow>
-        <Team>{home}</Team>
-        <Vs>vs</Vs>
-        <Team>{away}</Team>
+        <p>{home}</p>
+        <p className="vs">vs</p>
+        <p>{away}</p>
       </TextRow>
     </Container>
   );
@@ -48,12 +44,16 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   width: 18em;
-  border-radius: 16px;
+  border-radius: 8px;
   background: #fff;
+  transition: all 0.3s ease-out;
+  /* box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2); */
+  box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.4);
 
   &:hover {
-    transition: all 0.2s ease-out;
-    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+    /* transition: all 0.2s ease-out;
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2); */
+    transform: scale(1.05);
   }
 
   @media (max-width: 320px) {
@@ -63,15 +63,11 @@ const Container = styled.div`
 
 const TextWrapper = styled.div`
   text-align: center;
-`;
 
-const Text = styled.p`
-  font-family: "Ubuntu", sans-serif;
-  font-size: clamp(0.9rem, 1vw, 2rem);
-  color: #171717;
-  font-weight: 200;
-  padding: 0.2em 0;
-  text-transform: capitalize;
+  p {
+    padding: 0.2em 0;
+    text-transform: capitalize;
+  }
 `;
 
 const Row = styled.div`
@@ -93,15 +89,15 @@ const ImageContainer = styled.div`
     height: 50px;
     width: 50px;
   }
+
+  img {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+  }
 `;
 
-const TeamBadge = styled.img`
-  object-fit: contain;
-  height: 100%;
-  width: 100%;
-`;
-
-const FixtureInfo = styled.h4`
+const Fixture = styled.h4`
   background: #d3d5d7;
   height: 100%;
   display: flex;
@@ -110,10 +106,9 @@ const FixtureInfo = styled.h4`
   border-radius: 8px;
   padding: 10px;
   margin: 0 0.8rem;
-  font-family: "Sora", sans-serif;
 `;
 
-const ResultInfo = styled(FixtureInfo)`
+const Result = styled(Fixture)`
   background: #171717;
   color: #fafafa;
 `;
@@ -123,20 +118,22 @@ const TextRow = styled.div`
   flex-direction: row;
   width: 100%;
   justify-content: center;
+  align-items: center;
+
+  p {
+    font-size: clamp(1rem, 1vw, 2rem);
+    text-transform: uppercase;
+  }
+
+  .vs {
+    padding: 0 0.5rem;
+    opacity: 0.4;
+  }
 `;
 
-const Team = styled.h3`
-  font-family: "Ubuntu", sans-serif;
-  font-size: clamp(1rem, 1vw, 2rem);
-  color: #171717;
-  font-weight: 600;
-  text-transform: uppercase;
-`;
-
-const Vs = styled.p`
-  font-family: "Ubuntu", sans-serif;
-  font-size: clamp(1rem, 1vw, 2rem);
-  color: #171717;
-  font-weight: 100;
-  padding: 0 0.5rem;
-`;
+// const Vs = styled.p`
+//   font-size: clamp(1rem, 1vw, 2rem);
+//   color: #171717;
+//   font-weight: 100;
+//   padding: 0 0.5rem;
+// `;

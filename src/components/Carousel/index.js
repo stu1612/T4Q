@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -9,15 +9,23 @@ import styled from "styled-components";
 import { Schedule } from "../../Model/Schedule";
 
 export const Carousel = () => {
+  const [slideVal, setSlideVal] = useState(0);
+
+  useEffect(() => {
+    const initVal = Schedule.filter((val) => val.result !== "").map(
+      (newVal) => newVal !== ""
+    );
+    setSlideVal(initVal.length);
+  }, []);
+
   const settings = {
     dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
-    // className: "center",
     centerMode: true,
-    initialSlide: 6,
+    initialSlide: { slideVal },
 
     responsive: [
       {
@@ -72,8 +80,9 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+  margin-top: -2rem;
 
-  @media (min-width: 600px) {
+  /* @media (min-width: 600px) {
     width: 90%;
-  }
+  } */
 `;

@@ -27,6 +27,11 @@ export const NavContainer = styled.div`
   width: 80%;
   margin: 0 3rem;
   height: 100%;
+
+  @media (max-width: 768px) {
+    margin: 0;
+    width: 90%;
+  }
 `;
 
 export const ToggleNavigation = styled.div`

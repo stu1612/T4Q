@@ -3,7 +3,7 @@
 }
 
 .slick-list {
-  height: 450px;
+  height: 415px;
   padding: 0 !important;
 }
 
@@ -21,21 +21,21 @@
 
 .slick-prev,
 .slick-next {
-  top: 85% !important;
+  top: 32% !important;
   z-index: 2 !important;
 }
 
 .slick-prev {
-  left: 45% !important;
+  left: 2% !important;
 }
 
 .slick-next {
-  right: 45% !important;
+  right: 7% !important;
 }
 
 .slick-prev:before,
 .slick-next:before {
-  color: #171717;
+  /* color: #171717; */
   opacity: 0.6;
   display: none !important;
 }
@@ -43,14 +43,20 @@
 @media screen and (min-width: 600px) {
   .slick-prev:before,
   .slick-next:before {
-    display: block !important;
     font-size: 40px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: fit-content;
+    padding: 0 0.5rem;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 16px;
   }
 }
 @media screen and (min-width: 768px) {
   .slick-prev:before,
   .slick-next:before {
-    display: block !important;
     font-size: 50px !important;
   }
 }

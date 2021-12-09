@@ -13,25 +13,6 @@ export const Hem = () => {
       <Superettan />
       <Tabs />
       <Carousel />
-
-      <h1>THis is the main content</h1>
-      <h1>THis is the main content</h1>
-      <h1>THis is the main content</h1>
-      <h1>THis is the main content</h1>
-      <h1>THis is the main content</h1>
-      <h1>THis is the main content</h1>
-      <h1>THis is the main content</h1>
-      <h1>THis is the main content</h1>
-      <h1>THis is the main content</h1>
-      <h1>THis is the main content</h1>
-      <h1>THis is the main content</h1>
-      <h1>THis is the main content</h1>
-      <h1>THis is the main content</h1>
-      <h1>THis is the main content</h1>
-      <h1>THis is the main content</h1>
-      <h1>THis is the main content</h1>
-      <h1>THis is the main content</h1>
-      <h1>THis is the main content</h1>
     </Layout>
   );
 };

@@ -48,14 +48,17 @@ const Wrapper = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  @media (max-width: 973px) {
+  @media (max-width: 768px) {
     width: 90%;
   }
 `;
 
 const LogoContainer = styled.div`
   height: 14vh;
-  @media (max-width: 630px) {
+  @media (max-width: 1024px) {
+    height: 12vh;
+  }
+  @media (max-width: 768px) {
     height: 10vh;
   }
 `;
@@ -75,17 +78,20 @@ const SponsorsContainer = styled.div`
     width: 70px;
     margin: 0 1rem;
     object-fit: contain;
+    @media (max-width: 1024px) {
+      margin: 0 0.5rem;
+    }
   }
 `;
 
 const GridLayout = styled.div`
   .group {
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
       display: none;
     }
   }
   .single {
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
       display: block;
     }
   }
