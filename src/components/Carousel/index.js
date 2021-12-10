@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -9,14 +9,7 @@ import styled from "styled-components";
 import { Schedule } from "../../Model/Schedule";
 
 export const Carousel = () => {
-  const [slideVal, setSlideVal] = useState(0);
-
-  useEffect(() => {
-    const initVal = Schedule.filter((val) => val.result !== "").map(
-      (newVal) => newVal !== ""
-    );
-    setSlideVal(initVal.length);
-  }, []);
+  const number = Schedule.filter((game) => game.result !== "").length;
 
   const settings = {
     dots: false,
@@ -25,7 +18,7 @@ export const Carousel = () => {
     slidesToShow: 3,
     slidesToScroll: 3,
     centerMode: true,
-    initialSlide: { slideVal },
+    initialSlide: number,
 
     responsive: [
       {

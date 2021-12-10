@@ -175,7 +175,7 @@ export const Schedule = [
     time: "15:00",
     date: moment("2021-11-21").format("dddd, MMM Do"),
     jsDate: new Date("2021-11-21"),
-    result: "",
+    result: "81-80",
   },
   {
     home: ock.name,
@@ -186,7 +186,7 @@ export const Schedule = [
     time: "16:00",
     date: moment("2021-12-04").format("dddd, MMM Do"),
     jsDate: new Date("2021-12-04"),
-    result: "",
+    result: "100-83",
   },
   {
     home: t4q.name,
