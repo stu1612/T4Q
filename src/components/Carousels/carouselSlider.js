@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Carousel.css";
-import { CarouselItem } from "../Carousel_Item";
+import { CarouselItem } from "./sliderItem";
 import styled from "styled-components";
 import { Schedule } from "../../Model/Schedule";
 

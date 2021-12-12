@@ -7,7 +7,6 @@ export const Superettan = () => {
 };
 
 const Container = styled.div`
-  background: orange;
   height: 40vh;
   width: 100%;
   background: rgba(255, 205, 0, 0.4);
@@ -16,4 +15,5 @@ const Container = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: hue;
+  margin-top: -5rem;
 `;
