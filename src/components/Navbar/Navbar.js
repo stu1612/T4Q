@@ -1,11 +1,10 @@
 import React, { useContext, useState, useEffect } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+// import { BrowserRouter as Router } from "react-router-dom";
 import { ThemeContext } from "../../contexts/ThemeContext";
 import { ThemeToggler } from "../ThemeToggler/ThemeToggler";
 import { useViewportScroll } from "framer-motion";
-import { SwitchRoutes } from "../../routes/Switch";
+// import { AppRoutes } from "../../routes/Routes";
 import { DesktopNavigation } from "../DesktopNavigation/index";
-
 import { Nav, NavContainer, ToggleNavigation, Toggler } from "./Style";
 import { HamburgerMenu } from "../Hamburger/Hamburger";
 import { SideBarNavigation } from "../MobileNavigation";
@@ -44,24 +43,23 @@ export const Navbar = () => {
   }
 
   return (
-    <Router>
-      <Nav variants={scrollAnim} animate={hidden ? "hidden" : "visible"}>
-        <NavContainer>
-          <ToggleNavigation>
-            <HamburgerMenu open={open} isOpen={isOpen} />
-          </ToggleNavigation>
-          {!open ? (
-            <DesktopNavigation />
-          ) : (
-            <SideBarNavigation open={open} isOpen={isOpen} />
-          )}
-          <Toggler>
-            <NextGame />
-            <ThemeToggler themeToggler={themeToggler} />
-          </Toggler>
-        </NavContainer>
-      </Nav>
-      <SwitchRoutes />
-    </Router>
+    // <AppRoutes>
+    <Nav variants={scrollAnim} animate={hidden ? "hidden" : "visible"}>
+      <NavContainer>
+        <ToggleNavigation>
+          <HamburgerMenu open={open} isOpen={isOpen} />
+        </ToggleNavigation>
+        {!open ? (
+          <DesktopNavigation />
+        ) : (
+          <SideBarNavigation open={open} isOpen={isOpen} />
+        )}
+        <Toggler>
+          <NextGame />
+          <ThemeToggler themeToggler={themeToggler} />
+        </Toggler>
+      </NavContainer>
+    </Nav>
+    // </AppRoutes>
   );
 };

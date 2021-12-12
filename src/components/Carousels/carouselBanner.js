@@ -18,18 +18,21 @@ export const CarouselBanner = () => {
       f_name: "marcus",
       l_name: "rashford",
       text: "As a local lad from Manchester, playing for Manchester United is a dream come true. I always want to play and contribute as best as i can for the team and the fans",
+      slug: "rashford-talks-about-his-love-for-united/",
       img: img,
     },
     {
       f_name: "jason",
       l_name: "sancho",
       text: "As a local lad from Manchester, playing for Manchester United is a dream come true. I always want to play and contribute as best as i can for the team and the fans",
+      slug: "rashford-talks-about-his-love-for-united/",
       img: img2,
     },
     {
       f_name: "cristiano",
       l_name: "ronaldo",
       text: "As a local lad from Manchester, playing for Manchester United is a dream come true. I always want to play and contribute as best as i can for the team and the fans",
+      slug: "rashford-talks-about-his-love-for-united/",
       img: img3,
     },
   ];
@@ -52,7 +55,12 @@ export const CarouselBanner = () => {
               <BottomTitle>{item.l_name}</BottomTitle>
               <Divider />
               <p>{item.text}</p>
-              <Button title="Läs mer" onClick={() => navigate("/Nyehter")} />
+              <Button
+                title="Läs mer"
+                onClick={() =>
+                  navigate(`/nyheter/${item.slug}`, { state: item })
+                }
+              />
             </TextBox>
           </Container>
         </div>

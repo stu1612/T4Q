@@ -1,5 +1,5 @@
 import React from "react";
-import { useHistory } from "react-router";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 // Styles
 import styled from "styled-components";
@@ -10,11 +10,7 @@ import { Video } from "../components/Video/Video";
 import { titleAnim, buttonTitleAnim } from "../animations/onLoad_Anim";
 
 export const Opening = () => {
-  let history = useHistory();
-
-  const handleClick = () => {
-    history.push("/hem");
-  };
+  const navigate = useNavigate();
 
   return (
     <Container>
@@ -25,7 +21,7 @@ export const Opening = () => {
         </Title>
         <Button
           title="Välkommen"
-          onClick={handleClick}
+          onClick={() => navigate("hem")}
           variants={buttonTitleAnim}
           initial="hidden"
           animate="show"
