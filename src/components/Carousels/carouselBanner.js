@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -10,6 +11,8 @@ import img3 from "../../assets/images/Banner/team-photo.jpg";
 import { Button } from "../Button/Button";
 
 export const CarouselBanner = () => {
+  const navigate = useNavigate();
+
   const data = [
     {
       f_name: "marcus",
@@ -49,7 +52,7 @@ export const CarouselBanner = () => {
               <BottomTitle>{item.l_name}</BottomTitle>
               <Divider />
               <p>{item.text}</p>
-              <Button title="Läs mer" />
+              <Button title="Läs mer" onClick={() => navigate("/Nyehter")} />
             </TextBox>
           </Container>
         </div>

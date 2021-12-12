@@ -35,16 +35,16 @@ export const Tabs = () => {
   return (
     <>
       <Container>
-        <Content>
+        <>
           {data
             .filter((filteredItem) => filteredItem.tab === activeTab)
             .map((item) => (
-              <div key={item.tab}>
+              <Content key={item.tab}>
                 <Image img={item.img} />
                 <Tab item={item} />
-              </div>
+              </Content>
             ))}
-        </Content>
+        </>
 
         <List>
           {listData.map((list) => (
