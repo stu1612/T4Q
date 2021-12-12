@@ -7,6 +7,7 @@ import "./banner.css";
 import img from "../../assets/images/Banner/Banner_1.png";
 import img2 from "../../assets/images/Banner/grp_img.jpeg";
 import img3 from "../../assets/images/Banner/team-photo.jpg";
+import { Button } from "../Button/Button";
 
 export const CarouselBanner = () => {
   const data = [
@@ -39,19 +40,19 @@ export const CarouselBanner = () => {
       autoPlay
     >
       {data.map((item) => (
-        <>
+        <div key={item.f_name}>
           <Container>
             <Image src={item.img} />
             <Overlay />
-            <Image src={item.img} />
             <TextBox>
               <TopTitle>{item.f_name}</TopTitle>
               <BottomTitle>{item.l_name}</BottomTitle>
               <Divider />
               <p>{item.text}</p>
+              <Button title="Läs mer" />
             </TextBox>
           </Container>
-        </>
+        </div>
       ))}
     </Carousel>
   );
@@ -82,12 +83,12 @@ const TextBox = styled.div`
   left: 30%;
   top: 50%;
   transform: translate(-50%, -50%);
-  height: 50%;
+  height: auto;
   width: 30%;
-  background: transparent;
   text-align: left;
   p {
     color: #fff;
+    margin-bottom: 1rem;
   }
   @media (max-width: 600px) {
     left: 50%;

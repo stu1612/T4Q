@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 import React, { useEffect, useState } from "react";
 import { Schedule } from "../../Model/Schedule";

@@ -16,7 +16,7 @@ export const CarouselSlider = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
-    centerMode: true,
+    // centerMode: true,
     initialSlide: number,
 
     responsive: [

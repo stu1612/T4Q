@@ -39,10 +39,10 @@ export const Tabs = () => {
           {data
             .filter((filteredItem) => filteredItem.tab === activeTab)
             .map((item) => (
-              <>
+              <div key={item.tab}>
                 <Image img={item.img} />
                 <Tab item={item} />
-              </>
+              </div>
             ))}
         </Content>
 

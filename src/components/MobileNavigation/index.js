@@ -1,21 +1,21 @@
 import React from "react";
-import styled from "styled-components";
-import { Button } from "../Button/Button";
-import { FaChevronRight } from "react-icons/fa";
+// import styled from "styled-components";
+// import { Button } from "../Button/Button";
+// import { FaChevronRight } from "react-icons/fa";
 
 import {
   MobileContainer,
-  MobileContactLink,
-  MobileNavigation,
-  MobileNavigationLinks,
-  MobLink,
-  Wrapper,
+  // MobileContactLink,
+  // MobileNavigation,
+  // MobileNavigationLinks,
+  // MobLink,
+  // Wrapper,
 } from "./Style";
 
 export const SideBarNavigation = ({ open, isOpen }) => {
-  const toggle = () => {
-    isOpen(!open);
-  };
+  // const toggle = () => {
+  //   isOpen(!open);
+  // };
   return (
     <MobileContainer>
       {/* <MobileNavigation>

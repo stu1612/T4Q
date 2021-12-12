@@ -17,7 +17,6 @@ export const Navbar = () => {
 
   const { scrollY } = useViewportScroll();
   const [hidden, setHidden] = useState(false);
-  console.log(scrollY);
 
   useEffect(() => {
     return scrollY.onChange(() => updateScrollPos());
@@ -26,10 +25,8 @@ export const Navbar = () => {
   const updateScrollPos = () => {
     if (scrollY?.current < scrollY?.prev) {
       setHidden(false);
-      console.log("visible");
     } else if (scrollY?.current > 100 && scrollY?.current > scrollY?.prev) {
       setHidden(true);
-      console.log("hidden");
     }
   };
 
