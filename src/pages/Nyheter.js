@@ -11,30 +11,47 @@ export const Nyheter = () => {
   return (
     <Layout>
       <Container>
-        <div>
-          <img src={location.state.img} alt={location.state.l_name} />
-        </div>
-        {/* <h2>{location.state.f_name}</h2>
-        <p>Says that his second name is</p>
-        <h2>{location.state.l_name}</h2> */}
+        <img src={location.state.img} alt={location.state.l_name} />
+        <Content>
+          <h2>{location.state.news_title}</h2>
+          <p>{location.state.content_1}</p>
+          <p>{location.state.content_2}</p>
+          <p>{location.state.content_3}</p>
+        </Content>
       </Container>
     </Layout>
   );
 };
 
 const Container = styled.div`
-  min-height: 200vh;
-  height: auto;
+  min-height: 100vh;
+  height: 100%;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 
-  div {
+  img {
     height: 70vh;
+    object-fit: cover;
+    object-position: 0% 20%;
+    width: 100%;
+  }
+`;
 
-    img {
-      object-fit: cover;
-      object-position: 0% 20%;
-      height: 100%;
-      width: 100%;
-    }
+const Content = styled.div`
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-self: center;
+  padding: 5rem 2rem;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    font-size: clamp(1.4rem, 1.8vw, 3.8rem);
+  }
+  p {
+    margin-top: 1rem;
   }
 `;

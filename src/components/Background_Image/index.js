@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import img from "../../assets/images/cards/IMG_1.png";
 import teamImg from "../../assets/images/Banner/grp_img.jpeg";
+import { BottomTabs } from "../Tabs_Container/Bottom_Tabs";
 
 export const BackgroundImage = () => {
   return (
@@ -9,6 +10,7 @@ export const BackgroundImage = () => {
       <Image />
       <TabsContainer>
         <img src={teamImg} alt="team4q group" />
+        <BottomTabs />
       </TabsContainer>
     </Container>
   );
