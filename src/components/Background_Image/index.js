@@ -1,11 +1,19 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import styled from "styled-components";
+import TextTruncate from "react-text-truncate";
+
 import img from "../../assets/images/cards/IMG_1.png";
 import img1 from "../../assets/images/Banner/kids_long.jpg";
 import img2 from "../../assets/images/cards/KIDS_1.png";
 import img3 from "../../assets/images/cards/WOMEN_1.png";
 
+import { Button } from "../Button/Button";
+
 export const BackgroundImage = () => {
+  const navigate = useNavigate();
+
   const [activeTab, setActiveTab] = useState("Tab 1");
 
   const handleTab1 = () => setActiveTab("Tab 1");
@@ -18,9 +26,16 @@ export const BackgroundImage = () => {
       tab: "Tab 1",
       title: "Info",
       img: img1,
-      home_content: "This is some INFO about team4q",
-      full_content:
+      content_title: "This is some INFO about team4q",
+      news_title:
+        "As a local lad from Manchester, playing for Manchester United is a dream come true",
+      content_1:
         "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.",
+      content_2:
+        "Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. ",
+      content_3:
+        "Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,",
+      slug: "this-is-about-info/",
       handleClick: handleTab1,
     },
     {
@@ -28,7 +43,16 @@ export const BackgroundImage = () => {
       tab: "Tab 2",
       img: img2,
       title: "History",
-      home_content: "This is some HISTORY about team4q",
+      content_title: "This is some HISTORY about team4q",
+      news_title:
+        "As a local lad from Manchester, playing for Manchester United is a dream come true",
+      content_1:
+        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.",
+      content_2:
+        "Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. ",
+      content_3:
+        "Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,",
+      slug: "this-is-about-history/",
       handleClick: handleTab2,
     },
     {
@@ -36,7 +60,16 @@ export const BackgroundImage = () => {
       tab: "Tab 3",
       img: img3,
       title: "Sponsors",
-      home_content: "This is some SPONSORS about team4q",
+      content_title: "This is some SPONSORS about team4q",
+      news_title:
+        "As a local lad from Manchester, playing for Manchester United is a dream come true",
+      content_1:
+        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.",
+      content_2:
+        "Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. ",
+      content_3:
+        "Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,",
+      slug: "this-is-about-sponsors/",
       handleClick: handleTab3,
     },
   ];
@@ -49,11 +82,18 @@ export const BackgroundImage = () => {
           {listData
             .filter((data) => data.tab === activeTab)
             .map((item) => {
-              console.log(item);
               return (
                 <div key={item.no}>
                   <img src={item.img} alt={item.title} />
-                  <p>{item.home_content}</p>
+                  <TextContent>
+                    <h4>{item.content_title}</h4>
+                    <TextTruncate
+                      line={2}
+                      element="p"
+                      truncateText="…"
+                      text={item.content_1}
+                    />
+                  </TextContent>
                 </div>
               );
             })}
@@ -63,7 +103,7 @@ export const BackgroundImage = () => {
           {listData.map((item) => {
             return (
               <li
-                className={activeTab === `Tab ${item.tab}` ? "active" : ""}
+                className={activeTab === `Tab ${item.no}` ? "active" : ""}
                 onClick={item.handleClick}
                 key={item.no}
               >
@@ -120,6 +160,14 @@ const TabContent = styled.div`
   }
 `;
 
+const TextContent = styled.div`
+  padding: 1rem;
+
+  h4 {
+    padding: 0.5rem 0;
+  }
+`;
+
 const TabsList = styled.ul`
   position: absolute;
   bottom: 0;
@@ -136,7 +184,6 @@ const TabsList = styled.ul`
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    background: pink;
 
     &:hover {
       background: #d9d9d9;
@@ -145,6 +192,7 @@ const TabsList = styled.ul`
 
     &.active {
       background: #c70101;
+      border: 0.5px solid transparent;
 
       p {
         color: #fafafa;

@@ -2,6 +2,7 @@ import React from "react";
 import { useParams, useLocation } from "react-router-dom";
 import { Layout } from "../components/Page_Layout/Layout";
 import styled from "styled-components";
+import img from "../assets/images/cards/IMG_1.png";
 
 export const Nyheter = () => {
   const params = useParams();
@@ -11,7 +12,11 @@ export const Nyheter = () => {
   return (
     <Layout>
       <Container>
-        <img src={location.state.img} alt={location.state.l_name} />
+        {location.state.img ? (
+          <img src={location.state.img} alt="its interesting" />
+        ) : (
+          <img src={img} alt="people" />
+        )}
         <Content>
           <h2>{location.state.news_title}</h2>
           <p>{location.state.content_1}</p>

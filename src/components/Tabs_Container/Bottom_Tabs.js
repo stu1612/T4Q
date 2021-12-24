@@ -14,8 +14,9 @@ export const BottomTabs = () => {
 
   const listData = [
     {
+      no: 1,
       tab: "Tab 1",
-      title: "Info",
+      title: "Infossss",
       img: img,
       home_content: "This is some INFO about team4q",
       full_content:
@@ -23,6 +24,7 @@ export const BottomTabs = () => {
       handleClick: handleTab1,
     },
     {
+      no: 2,
       tab: "Tab 2",
       img: img2,
       title: "History",
@@ -30,6 +32,7 @@ export const BottomTabs = () => {
       handleClick: handleTab2,
     },
     {
+      no: 3,
       tab: "Tab 3",
       img: img3,
       title: "Sponsors",
@@ -53,7 +56,7 @@ export const BottomTabs = () => {
       <TabsList>
         {listData.map((item) => (
           <li
-            className={activeTab === `Tab ${item.tab}` ? "active" : ""}
+            className={activeTab === `Tab ${item.no}` ? "active" : ""}
             onClick={item.handleClick}
             key={item.tab}
           >
