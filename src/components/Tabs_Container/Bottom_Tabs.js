@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import TextTruncate from "react-text-truncate";
 import styled from "styled-components";
+import img from "../../assets/images/Banner/kids_long.jpg";
+import img2 from "../../assets/images/cards/KIDS_1.png";
+import img3 from "../../assets/images/cards/WOMEN_1.png";
 
 export const BottomTabs = () => {
   const [activeTab, setActiveTab] = useState("Tab 1");
@@ -11,33 +14,49 @@ export const BottomTabs = () => {
 
   const listData = [
     {
-      no: 1,
+      tab: "Tab 1",
       title: "Info",
-      home_content: "This is some history about team4q",
+      img: img,
+      home_content: "This is some INFO about team4q",
       full_content:
         "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.",
       handleClick: handleTab1,
     },
     {
-      no: 2,
+      tab: "Tab 2",
+      img: img2,
       title: "History",
-      home_content: "Greenwod will take chance when it comes",
+      home_content: "This is some HISTORY about team4q",
       handleClick: handleTab2,
     },
     {
-      no: 3,
+      tab: "Tab 3",
+      img: img3,
       title: "Sponsors",
-      home_content: "Greenwod will take chance when it comes",
+      home_content: "This is some SPONSORS about team4q",
       handleClick: handleTab3,
     },
   ];
 
   return (
     <div>
-      <h2>Gello</h2>
+      <div>
+        {listData
+          .filter((data) => data.tab === activeTab)
+          .map((item) => (
+            <Wrapper>
+              <img src={item.img} alt={item.title} />
+              <p>{item.home_content}</p>
+            </Wrapper>
+          ))}
+      </div>
       <TabsList>
         {listData.map((item) => (
-          <li>
+          <li
+            className={activeTab === `Tab ${item.tab}` ? "active" : ""}
+            onClick={item.handleClick}
+            key={item.tab}
+          >
             <p>{item.title}</p>
           </li>
         ))}
@@ -61,5 +80,15 @@ const TabsList = styled.ul`
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+  }
+`;
+
+const Wrapper = styled.div`
+  img {
+    height: 60%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 0 20%;
   }
 `;

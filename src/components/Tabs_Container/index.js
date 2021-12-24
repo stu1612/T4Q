@@ -47,18 +47,20 @@ export const Tabs = () => {
         </>
 
         <List>
-          {listData.map((list) => (
-            <li
-              className={activeTab === `Tab ${list.no}` ? "active" : ""}
-              onClick={list.handleClick}
-              key={list.no}
-            >
-              <div>
-                <p>{list.para}</p>
-                <small>{list.small}</small>
-              </div>
-            </li>
-          ))}
+          {listData.map((list) => {
+            return (
+              <li
+                className={activeTab === `Tab ${list.no}` ? "active" : ""}
+                onClick={list.handleClick}
+                key={list.no}
+              >
+                <div>
+                  <p>{list.para}</p>
+                  <small>{list.small}</small>
+                </div>
+              </li>
+            );
+          })}
           <div className="space" />
         </List>
       </Container>

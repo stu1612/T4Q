@@ -1,10 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 
 export const Tab = ({ item }) => {
+  const navigate = useNavigate();
+
   return (
     <Wrapper>
-      <div>
+      <div onClick={() => navigate(`/nyheter/${item.slug}`, { state: item })}>
         <h3>{item.text}</h3>
         <p>Read more </p>
       </div>
@@ -14,12 +17,13 @@ export const Tab = ({ item }) => {
 
 const Wrapper = styled.div`
   position: absolute;
-  pointer-events: none;
+  /* pointer-events: none; */
   height: 5rem;
   bottom: 20%;
   left: 39%;
   width: 57%;
   transform: translate(-50%, 0%);
+
   div {
     background: rgba(0, 0, 0, 0.7);
     height: 100%;
