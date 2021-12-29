@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 import styled from "styled-components";
 import TextTruncate from "react-text-truncate";
@@ -9,10 +9,10 @@ import img1 from "../../assets/images/Banner/kids_long.jpg";
 import img2 from "../../assets/images/cards/KIDS_1.png";
 import img3 from "../../assets/images/cards/WOMEN_1.png";
 
-import { Button } from "../Button/Button";
+// import { Button } from "../Button/Button";
 
 export const BackgroundImage = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const [activeTab, setActiveTab] = useState("Tab 1");
 
